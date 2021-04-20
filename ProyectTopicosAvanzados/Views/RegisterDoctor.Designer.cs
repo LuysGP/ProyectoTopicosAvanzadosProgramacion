@@ -31,9 +31,9 @@ namespace ProyectTopicosAvanzados.Views
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.buttonRegisterConsult = new FontAwesome.Sharp.IconButton();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBoxEspeciality = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -44,9 +44,9 @@ namespace ProyectTopicosAvanzados.Views
             // panel1
             // 
             this.panel1.Controls.Add(this.buttonRegisterConsult);
-            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.textBoxEspeciality);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.textBoxName);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 61);
@@ -71,13 +71,14 @@ namespace ProyectTopicosAvanzados.Views
             this.buttonRegisterConsult.Text = "Registrar";
             this.buttonRegisterConsult.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonRegisterConsult.UseVisualStyleBackColor = false;
+            this.buttonRegisterConsult.Click += new System.EventHandler(this.buttonRegisterConsult_Click);
             // 
-            // textBox2
+            // textBoxEspeciality
             // 
-            this.textBox2.Location = new System.Drawing.Point(17, 99);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(183, 20);
-            this.textBox2.TabIndex = 36;
+            this.textBoxEspeciality.Location = new System.Drawing.Point(17, 99);
+            this.textBoxEspeciality.Name = "textBoxEspeciality";
+            this.textBoxEspeciality.Size = new System.Drawing.Size(183, 20);
+            this.textBoxEspeciality.TabIndex = 36;
             // 
             // label3
             // 
@@ -89,12 +90,12 @@ namespace ProyectTopicosAvanzados.Views
             this.label3.TabIndex = 35;
             this.label3.Text = "Especialidad";
             // 
-            // textBox1
+            // textBoxName
             // 
-            this.textBox1.Location = new System.Drawing.Point(17, 34);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(183, 20);
-            this.textBox1.TabIndex = 34;
+            this.textBoxName.Location = new System.Drawing.Point(17, 34);
+            this.textBoxName.Name = "textBoxName";
+            this.textBoxName.Size = new System.Drawing.Size(183, 20);
+            this.textBoxName.TabIndex = 34;
             // 
             // label2
             // 
@@ -146,9 +147,9 @@ namespace ProyectTopicosAvanzados.Views
 
         private System.Windows.Forms.Panel panel1;
         private FontAwesome.Sharp.IconButton buttonRegisterConsult;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBoxEspeciality;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
