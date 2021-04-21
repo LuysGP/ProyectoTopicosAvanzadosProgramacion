@@ -108,10 +108,7 @@ namespace ProyectTopicosAvanzados
                 ActivateButton(sender);
             }
         }
-        private void buttonClose_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+        private void buttonClose_Click(object sender, EventArgs e) => Application.Exit();
         #endregion
 
         #region Methods
