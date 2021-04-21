@@ -93,6 +93,12 @@
     <Compile Include="Views\EditPatient.Designer.cs">
       <DependentUpon>EditPatient.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\EditTreatment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\EditTreatment.Designer.cs">
+      <DependentUpon>EditTreatment.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\HomeScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +128,18 @@
     </Compile>
     <Compile Include="Views\RegisterPatient.Designer.cs">
       <DependentUpon>RegisterPatient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RegisterTreatment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\RegisterTreatment.Designer.cs">
+      <DependentUpon>RegisterTreatment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Treatments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Treatments.Designer.cs">
+      <DependentUpon>Treatments.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Unity.cs">
       <SubType>Form</SubType>
@@ -170,6 +188,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\RegisterPatient.resx">
       <DependentUpon>RegisterPatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RegisterTreatment.resx">
+      <DependentUpon>RegisterTreatment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Unity.resx">
       <DependentUpon>Unity.cs</DependentUpon>

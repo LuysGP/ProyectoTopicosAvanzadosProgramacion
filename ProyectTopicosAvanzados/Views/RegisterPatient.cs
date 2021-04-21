@@ -24,6 +24,8 @@ namespace ProyectTopicosAvanzados.Views
             try
             {
                 patient = new PatientDetails(int.Parse(textBoxSS.Text), int.Parse(textBoxAge.Text), textBoxName.Text, int.Parse(textBox1Unity.Text));
+                patient.Register();
+                MessageBox.Show("Paciente registrado correctamente");
             }
             catch (Exception err)
             {
@@ -48,7 +50,6 @@ namespace ProyectTopicosAvanzados.Views
             this.name = name;
             this.date = DateTime.Now;
             this.unity_id = unity_id;
-
         }
         public void Register()
         {

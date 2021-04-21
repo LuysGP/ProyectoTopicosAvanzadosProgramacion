@@ -50,3 +50,4 @@ C:\Users\gues\source\repos\ProyectoClinica\ProyectoTopicosAvanzadosProgramacion\
 C:\Users\gues\source\repos\ProyectoClinica\ProyectoTopicosAvanzadosProgramacion\ProyectTopicosAvanzados\obj\Debug\ProyectTopicosAvanzados.csproj.CopyComplete
 C:\Users\gues\source\repos\ProyectoClinica\ProyectoTopicosAvanzadosProgramacion\ProyectTopicosAvanzados\obj\Debug\ProyectTopicosAvanzados.exe
 C:\Users\gues\source\repos\ProyectoClinica\ProyectoTopicosAvanzadosProgramacion\ProyectTopicosAvanzados\obj\Debug\ProyectTopicosAvanzados.pdb
+C:\Users\gues\source\repos\ProyectoClinica\ProyectoTopicosAvanzadosProgramacion\ProyectTopicosAvanzados\obj\Debug\ProyectTopicosAvanzados.Views.RegisterTreatment.resources

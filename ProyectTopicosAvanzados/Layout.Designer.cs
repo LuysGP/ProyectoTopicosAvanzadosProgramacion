@@ -34,11 +34,16 @@ namespace ProyectTopicosAvanzados
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.homeButton = new FontAwesome.Sharp.IconButton();
             this.mainPanel = new System.Windows.Forms.Panel();
+            this.panelUnity = new System.Windows.Forms.Panel();
+            this.button6 = new System.Windows.Forms.Button();
+            this.buttonRegisterUnity = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.buttonUnity = new FontAwesome.Sharp.IconButton();
             this.panelDoctors = new System.Windows.Forms.Panel();
             this.button = new System.Windows.Forms.Button();
             this.buttonRegisterDoctor = new System.Windows.Forms.Button();
             this.buttonAllDoctors = new System.Windows.Forms.Button();
+            this.buttonDoctors = new FontAwesome.Sharp.IconButton();
             this.panelPatients = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -53,16 +58,19 @@ namespace ProyectTopicosAvanzados
             this.buttonClose = new FontAwesome.Sharp.IconButton();
             this.panelChildForm = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.buttonDoctors = new FontAwesome.Sharp.IconButton();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.registerTreatment = new FontAwesome.Sharp.IconButton();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.mainPanel.SuspendLayout();
+            this.panelUnity.SuspendLayout();
             this.panelDoctors.SuspendLayout();
             this.panelPatients.SuspendLayout();
             this.panelConsults.SuspendLayout();
             this.panelHeader.SuspendLayout();
             this.panelChildForm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelLogo
@@ -112,6 +120,7 @@ namespace ProyectTopicosAvanzados
             // 
             this.mainPanel.AutoScroll = true;
             this.mainPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(86)))), ((int)(((byte)(163)))));
+            this.mainPanel.Controls.Add(this.panelUnity);
             this.mainPanel.Controls.Add(this.buttonUnity);
             this.mainPanel.Controls.Add(this.panelDoctors);
             this.mainPanel.Controls.Add(this.buttonDoctors);
@@ -124,8 +133,71 @@ namespace ProyectTopicosAvanzados
             this.mainPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.mainPanel.Location = new System.Drawing.Point(0, 0);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(215, 561);
+            this.mainPanel.Size = new System.Drawing.Size(215, 621);
             this.mainPanel.TabIndex = 0;
+            // 
+            // panelUnity
+            // 
+            this.panelUnity.Controls.Add(this.button6);
+            this.panelUnity.Controls.Add(this.buttonRegisterUnity);
+            this.panelUnity.Controls.Add(this.button1);
+            this.panelUnity.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelUnity.Location = new System.Drawing.Point(0, 702);
+            this.panelUnity.Name = "panelUnity";
+            this.panelUnity.Size = new System.Drawing.Size(198, 105);
+            this.panelUnity.TabIndex = 10;
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(107)))), ((int)(((byte)(53)))));
+            this.button6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.ForeColor = System.Drawing.Color.White;
+            this.button6.Location = new System.Drawing.Point(0, 72);
+            this.button6.Name = "button6";
+            this.button6.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.button6.Size = new System.Drawing.Size(198, 36);
+            this.button6.TabIndex = 6;
+            this.button6.Text = "Editar unidad";
+            this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button6.UseVisualStyleBackColor = false;
+            // 
+            // buttonRegisterUnity
+            // 
+            this.buttonRegisterUnity.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(107)))), ((int)(((byte)(53)))));
+            this.buttonRegisterUnity.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonRegisterUnity.FlatAppearance.BorderSize = 0;
+            this.buttonRegisterUnity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonRegisterUnity.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRegisterUnity.ForeColor = System.Drawing.Color.White;
+            this.buttonRegisterUnity.Location = new System.Drawing.Point(0, 36);
+            this.buttonRegisterUnity.Name = "buttonRegisterUnity";
+            this.buttonRegisterUnity.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.buttonRegisterUnity.Size = new System.Drawing.Size(198, 36);
+            this.buttonRegisterUnity.TabIndex = 5;
+            this.buttonRegisterUnity.Text = "Registrar unidad";
+            this.buttonRegisterUnity.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonRegisterUnity.UseVisualStyleBackColor = false;
+            this.buttonRegisterUnity.Click += new System.EventHandler(this.buttonRegisterUnity_Click_1);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(107)))), ((int)(((byte)(53)))));
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(0, 0);
+            this.button1.Name = "button1";
+            this.button1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.button1.Size = new System.Drawing.Size(198, 36);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Unidades";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // buttonUnity
             // 
@@ -214,6 +286,29 @@ namespace ProyectTopicosAvanzados
             this.buttonAllDoctors.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonAllDoctors.UseVisualStyleBackColor = false;
             this.buttonAllDoctors.Click += new System.EventHandler(this.buttonAllDoctors_Click);
+            // 
+            // buttonDoctors
+            // 
+            this.buttonDoctors.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonDoctors.FlatAppearance.BorderSize = 0;
+            this.buttonDoctors.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonDoctors.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonDoctors.ForeColor = System.Drawing.Color.White;
+            this.buttonDoctors.IconChar = FontAwesome.Sharp.IconChar.User;
+            this.buttonDoctors.IconColor = System.Drawing.Color.White;
+            this.buttonDoctors.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.buttonDoctors.IconSize = 30;
+            this.buttonDoctors.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonDoctors.Location = new System.Drawing.Point(0, 498);
+            this.buttonDoctors.Name = "buttonDoctors";
+            this.buttonDoctors.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.buttonDoctors.Size = new System.Drawing.Size(198, 50);
+            this.buttonDoctors.TabIndex = 7;
+            this.buttonDoctors.Text = "Doctores";
+            this.buttonDoctors.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonDoctors.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonDoctors.UseVisualStyleBackColor = true;
+            this.buttonDoctors.Click += new System.EventHandler(this.buttonDoctors_Click);
             // 
             // panelPatients
             // 
@@ -426,7 +521,7 @@ namespace ProyectTopicosAvanzados
             this.panelChildForm.Location = new System.Drawing.Point(215, 59);
             this.panelChildForm.Margin = new System.Windows.Forms.Padding(3, 3, 15, 3);
             this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.Size = new System.Drawing.Size(669, 502);
+            this.panelChildForm.Size = new System.Drawing.Size(669, 562);
             this.panelChildForm.TabIndex = 2;
             // 
             // pictureBox2
@@ -435,40 +530,47 @@ namespace ProyectTopicosAvanzados
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(669, 502);
+            this.pictureBox2.Size = new System.Drawing.Size(669, 562);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabIndex = 3;
             this.pictureBox2.TabStop = false;
             // 
-            // buttonDoctors
+            // panel1
             // 
-            this.buttonDoctors.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonDoctors.FlatAppearance.BorderSize = 0;
-            this.buttonDoctors.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonDoctors.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonDoctors.ForeColor = System.Drawing.Color.White;
-            this.buttonDoctors.IconChar = FontAwesome.Sharp.IconChar.User;
-            this.buttonDoctors.IconColor = System.Drawing.Color.White;
-            this.buttonDoctors.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.buttonDoctors.IconSize = 30;
-            this.buttonDoctors.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonDoctors.Location = new System.Drawing.Point(0, 498);
-            this.buttonDoctors.Name = "buttonDoctors";
-            this.buttonDoctors.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.buttonDoctors.Size = new System.Drawing.Size(198, 50);
-            this.buttonDoctors.TabIndex = 7;
-            this.buttonDoctors.Text = "Doctores";
-            this.buttonDoctors.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonDoctors.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonDoctors.UseVisualStyleBackColor = true;
-            this.buttonDoctors.Click += new System.EventHandler(this.buttonDoctors_Click);
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(57)))), ((int)(((byte)(144)))));
+            this.panel1.Controls.Add(this.registerTreatment);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(215, 552);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(669, 69);
+            this.panel1.TabIndex = 3;
+            // 
+            // registerTreatment
+            // 
+            this.registerTreatment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(86)))), ((int)(((byte)(163)))));
+            this.registerTreatment.FlatAppearance.BorderSize = 0;
+            this.registerTreatment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.registerTreatment.ForeColor = System.Drawing.Color.White;
+            this.registerTreatment.IconChar = FontAwesome.Sharp.IconChar.BookMedical;
+            this.registerTreatment.IconColor = System.Drawing.Color.White;
+            this.registerTreatment.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.registerTreatment.IconSize = 25;
+            this.registerTreatment.Location = new System.Drawing.Point(16, 17);
+            this.registerTreatment.Name = "registerTreatment";
+            this.registerTreatment.Size = new System.Drawing.Size(155, 40);
+            this.registerTreatment.TabIndex = 0;
+            this.registerTreatment.Text = "Registrar tratamiento";
+            this.registerTreatment.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.registerTreatment.UseVisualStyleBackColor = false;
+            this.registerTreatment.Click += new System.EventHandler(this.registerTreatment_Click);
             // 
             // Layout
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(248)))), ((int)(((byte)(251)))));
-            this.ClientSize = new System.Drawing.Size(884, 561);
+            this.ClientSize = new System.Drawing.Size(884, 621);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelChildForm);
             this.Controls.Add(this.panelHeader);
             this.Controls.Add(this.mainPanel);
@@ -479,12 +581,14 @@ namespace ProyectTopicosAvanzados
             this.panelLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.mainPanel.ResumeLayout(false);
+            this.panelUnity.ResumeLayout(false);
             this.panelDoctors.ResumeLayout(false);
             this.panelPatients.ResumeLayout(false);
             this.panelConsults.ResumeLayout(false);
             this.panelHeader.ResumeLayout(false);
             this.panelChildForm.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -503,7 +607,6 @@ namespace ProyectTopicosAvanzados
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button buttonAllPatientsView;
         private FontAwesome.Sharp.IconButton buttonPatients;
-        private FontAwesome.Sharp.IconButton buttonUnity;
         private System.Windows.Forms.Panel panelDoctors;
         private System.Windows.Forms.Button button;
         private System.Windows.Forms.Button buttonRegisterDoctor;
@@ -512,8 +615,15 @@ namespace ProyectTopicosAvanzados
         private System.Windows.Forms.Panel panelChildForm;
         private FontAwesome.Sharp.IconButton buttonClose;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private FontAwesome.Sharp.IconButton buttonDoctors;
+        private System.Windows.Forms.Panel panelUnity;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button buttonRegisterUnity;
+        private System.Windows.Forms.Button button1;
+        private FontAwesome.Sharp.IconButton buttonUnity;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private FontAwesome.Sharp.IconButton registerTreatment;
     }
 }
 

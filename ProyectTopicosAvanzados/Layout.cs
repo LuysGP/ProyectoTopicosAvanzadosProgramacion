@@ -40,6 +40,7 @@ namespace ProyectTopicosAvanzados
             panelConsults.Visible = false;
             panelDoctors.Visible = false;
             panelPatients.Visible = false;
+            panelUnity.Visible = false;
         }
 
         private void buttonConsults_Click(object sender, EventArgs e)
@@ -65,9 +66,18 @@ namespace ProyectTopicosAvanzados
 
         private void buttonUnity_Click(object sender, EventArgs e)
         {
-            CloseSubMenus();
-            ActivateButton(sender);
-            OpenChildForm(new Unity());
+            if (panelUnity.Visible)
+            {
+                panelUnity.Visible = false;
+                ResetButton();
+            }
+            else
+            {
+                CloseSubMenus();
+                panelUnity.Visible = true;
+                ActivateButton(sender);
+            }
+
         }
         private void buttonPatients_Click(object sender, EventArgs e)
         {
@@ -217,6 +227,19 @@ namespace ProyectTopicosAvanzados
         private void button_Click(object sender, EventArgs e)
         {
             OpenChildForm(new EditDoctor());
+        }
+
+
+        private void buttonRegisterUnity_Click_1(object sender, EventArgs e)
+        {
+            CloseSubMenus();
+            ActivateButton(sender);
+            OpenChildForm(new Unity());
+        }
+
+        private void registerTreatment_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new RegisterTreatment());
         }
     }
 }
