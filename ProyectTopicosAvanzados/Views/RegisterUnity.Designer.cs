@@ -1,7 +1,7 @@
 ﻿
 namespace ProyectTopicosAvanzados.Views
 {
-    partial class Unity
+    partial class RegisterUnity
     {
         /// <summary>
         /// Required designer variable.

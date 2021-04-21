@@ -44,10 +44,12 @@ C:\Users\gues\source\repos\ProyectoClinica\ProyectoTopicosAvanzadosProgramacion\
 C:\Users\gues\source\repos\ProyectoClinica\ProyectoTopicosAvanzadosProgramacion\ProyectTopicosAvanzados\obj\Debug\ProyectTopicosAvanzados.Views.RegisterConsult.resources
 C:\Users\gues\source\repos\ProyectoClinica\ProyectoTopicosAvanzadosProgramacion\ProyectTopicosAvanzados\obj\Debug\ProyectTopicosAvanzados.Views.RegisterDoctor.resources
 C:\Users\gues\source\repos\ProyectoClinica\ProyectoTopicosAvanzadosProgramacion\ProyectTopicosAvanzados\obj\Debug\ProyectTopicosAvanzados.Views.RegisterPatient.resources
-C:\Users\gues\source\repos\ProyectoClinica\ProyectoTopicosAvanzadosProgramacion\ProyectTopicosAvanzados\obj\Debug\ProyectTopicosAvanzados.Views.Unity.resources
 C:\Users\gues\source\repos\ProyectoClinica\ProyectoTopicosAvanzadosProgramacion\ProyectTopicosAvanzados\obj\Debug\ProyectTopicosAvanzados.csproj.GenerateResource.cache
 C:\Users\gues\source\repos\ProyectoClinica\ProyectoTopicosAvanzadosProgramacion\ProyectTopicosAvanzados\obj\Debug\ProyectTopicosAvanzados.csproj.CoreCompileInputs.cache
 C:\Users\gues\source\repos\ProyectoClinica\ProyectoTopicosAvanzadosProgramacion\ProyectTopicosAvanzados\obj\Debug\ProyectTopicosAvanzados.csproj.CopyComplete
 C:\Users\gues\source\repos\ProyectoClinica\ProyectoTopicosAvanzadosProgramacion\ProyectTopicosAvanzados\obj\Debug\ProyectTopicosAvanzados.exe
 C:\Users\gues\source\repos\ProyectoClinica\ProyectoTopicosAvanzadosProgramacion\ProyectTopicosAvanzados\obj\Debug\ProyectTopicosAvanzados.pdb
 C:\Users\gues\source\repos\ProyectoClinica\ProyectoTopicosAvanzadosProgramacion\ProyectTopicosAvanzados\obj\Debug\ProyectTopicosAvanzados.Views.RegisterTreatment.resources
+C:\Users\gues\source\repos\ProyectoClinica\ProyectoTopicosAvanzadosProgramacion\ProyectTopicosAvanzados\obj\Debug\ProyectTopicosAvanzados.Views.Treatments.resources
+C:\Users\gues\source\repos\ProyectoClinica\ProyectoTopicosAvanzadosProgramacion\ProyectTopicosAvanzados\obj\Debug\ProyectTopicosAvanzados.Views.RegisterUnity.resources
+C:\Users\gues\source\repos\ProyectoClinica\ProyectoTopicosAvanzadosProgramacion\ProyectTopicosAvanzados\obj\Debug\ProyectTopicosAvanzados.Views.Units.resources

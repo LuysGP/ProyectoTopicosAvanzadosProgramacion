@@ -232,14 +232,22 @@ namespace ProyectTopicosAvanzados
 
         private void buttonRegisterUnity_Click_1(object sender, EventArgs e)
         {
-            CloseSubMenus();
-            ActivateButton(sender);
-            OpenChildForm(new Unity());
+            OpenChildForm(new RegisterUnity());
         }
 
         private void registerTreatment_Click(object sender, EventArgs e)
         {
             OpenChildForm(new RegisterTreatment());
+        }
+
+        private void buttonHistory_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Treatments());
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Units());
         }
     }
 }

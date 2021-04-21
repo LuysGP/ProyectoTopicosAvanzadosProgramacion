@@ -11,22 +11,22 @@ using System.Data.SqlClient;
 
 namespace ProyectTopicosAvanzados.Views
 {
-    public partial class Consults : Form
+    public partial class Units : Form
     {
         SqlConnection conection = new SqlConnection(@"Data Source=DESKTOP-VKEH4OM;Initial Catalog = Clinica; integrated security=true");
         DataTable dataTable = new DataTable();
-        public Consults()
+        public Units()
         {
             InitializeComponent();
-            SelectAllConsults();
+            SelectAllUnits();
         }
-
-        private void SelectAllConsults()
+        private void SelectAllUnits()
         {
             try
             {
                 conection.Open();
-                String query = "SELECT * FROM Register";
+
+                String query = "SELECT * FROM Unity";
                 SqlCommand command = new SqlCommand(query, conection);
                 SqlDataAdapter adapter = new SqlDataAdapter(command);
                 adapter.Fill(dataTable);

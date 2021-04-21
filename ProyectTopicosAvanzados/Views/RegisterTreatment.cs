@@ -17,6 +17,7 @@ namespace ProyectTopicosAvanzados.Views
         public RegisterTreatment()
         {
             InitializeComponent();
+
         }
 
         private void buttonRegisterConsult_Click(object sender, EventArgs e)
@@ -35,6 +36,7 @@ namespace ProyectTopicosAvanzados.Views
                 MessageBox.Show(err.Message);
             }
         }
+
     }
 
     public class TreatmentDetails

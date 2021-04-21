@@ -141,11 +141,17 @@
     <Compile Include="Views\Treatments.Designer.cs">
       <DependentUpon>Treatments.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Unity.cs">
+    <Compile Include="Views\RegisterUnity.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Unity.Designer.cs">
-      <DependentUpon>Unity.cs</DependentUpon>
+    <Compile Include="Views\RegisterUnity.Designer.cs">
+      <DependentUpon>RegisterUnity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Units.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Units.Designer.cs">
+      <DependentUpon>Units.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Layout.resx">
       <DependentUpon>Layout.cs</DependentUpon>
@@ -192,8 +198,14 @@
     <EmbeddedResource Include="Views\RegisterTreatment.resx">
       <DependentUpon>RegisterTreatment.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Unity.resx">
-      <DependentUpon>Unity.cs</DependentUpon>
+    <EmbeddedResource Include="Views\Treatments.resx">
+      <DependentUpon>Treatments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RegisterUnity.resx">
+      <DependentUpon>RegisterUnity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Units.resx">
+      <DependentUpon>Units.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

@@ -30,8 +30,6 @@ namespace ProyectTopicosAvanzados
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Layout));
-            this.panelLogo = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.homeButton = new FontAwesome.Sharp.IconButton();
             this.mainPanel = new System.Windows.Forms.Panel();
             this.panelUnity = new System.Windows.Forms.Panel();
@@ -59,9 +57,9 @@ namespace ProyectTopicosAvanzados
             this.panelChildForm = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.buttonHistory = new FontAwesome.Sharp.IconButton();
             this.registerTreatment = new FontAwesome.Sharp.IconButton();
-            this.panelLogo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.mainPanel.SuspendLayout();
             this.panelUnity.SuspendLayout();
             this.panelDoctors.SuspendLayout();
@@ -71,27 +69,8 @@ namespace ProyectTopicosAvanzados
             this.panelChildForm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // panelLogo
-            // 
-            this.panelLogo.Controls.Add(this.pictureBox1);
-            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelLogo.Location = new System.Drawing.Point(0, 0);
-            this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(198, 140);
-            this.panelLogo.TabIndex = 0;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(198, 140);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // homeButton
             // 
@@ -105,7 +84,7 @@ namespace ProyectTopicosAvanzados
             this.homeButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.homeButton.IconSize = 30;
             this.homeButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.homeButton.Location = new System.Drawing.Point(0, 140);
+            this.homeButton.Location = new System.Drawing.Point(0, 0);
             this.homeButton.Name = "homeButton";
             this.homeButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.homeButton.Size = new System.Drawing.Size(198, 50);
@@ -129,7 +108,6 @@ namespace ProyectTopicosAvanzados
             this.mainPanel.Controls.Add(this.panelConsults);
             this.mainPanel.Controls.Add(this.buttonConsults);
             this.mainPanel.Controls.Add(this.homeButton);
-            this.mainPanel.Controls.Add(this.panelLogo);
             this.mainPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.mainPanel.Location = new System.Drawing.Point(0, 0);
             this.mainPanel.Name = "mainPanel";
@@ -142,7 +120,7 @@ namespace ProyectTopicosAvanzados
             this.panelUnity.Controls.Add(this.buttonRegisterUnity);
             this.panelUnity.Controls.Add(this.button1);
             this.panelUnity.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelUnity.Location = new System.Drawing.Point(0, 702);
+            this.panelUnity.Location = new System.Drawing.Point(0, 562);
             this.panelUnity.Name = "panelUnity";
             this.panelUnity.Size = new System.Drawing.Size(198, 105);
             this.panelUnity.TabIndex = 10;
@@ -198,6 +176,7 @@ namespace ProyectTopicosAvanzados
             this.button1.Text = "Unidades";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // buttonUnity
             // 
@@ -211,7 +190,7 @@ namespace ProyectTopicosAvanzados
             this.buttonUnity.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.buttonUnity.IconSize = 30;
             this.buttonUnity.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonUnity.Location = new System.Drawing.Point(0, 652);
+            this.buttonUnity.Location = new System.Drawing.Point(0, 512);
             this.buttonUnity.Name = "buttonUnity";
             this.buttonUnity.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.buttonUnity.Size = new System.Drawing.Size(198, 50);
@@ -228,7 +207,7 @@ namespace ProyectTopicosAvanzados
             this.panelDoctors.Controls.Add(this.buttonRegisterDoctor);
             this.panelDoctors.Controls.Add(this.buttonAllDoctors);
             this.panelDoctors.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelDoctors.Location = new System.Drawing.Point(0, 548);
+            this.panelDoctors.Location = new System.Drawing.Point(0, 408);
             this.panelDoctors.Name = "panelDoctors";
             this.panelDoctors.Size = new System.Drawing.Size(198, 104);
             this.panelDoctors.TabIndex = 8;
@@ -299,7 +278,7 @@ namespace ProyectTopicosAvanzados
             this.buttonDoctors.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.buttonDoctors.IconSize = 30;
             this.buttonDoctors.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonDoctors.Location = new System.Drawing.Point(0, 498);
+            this.buttonDoctors.Location = new System.Drawing.Point(0, 358);
             this.buttonDoctors.Name = "buttonDoctors";
             this.buttonDoctors.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.buttonDoctors.Size = new System.Drawing.Size(198, 50);
@@ -316,7 +295,7 @@ namespace ProyectTopicosAvanzados
             this.panelPatients.Controls.Add(this.button5);
             this.panelPatients.Controls.Add(this.buttonAllPatientsView);
             this.panelPatients.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelPatients.Location = new System.Drawing.Point(0, 394);
+            this.panelPatients.Location = new System.Drawing.Point(0, 254);
             this.panelPatients.Name = "panelPatients";
             this.panelPatients.Size = new System.Drawing.Size(198, 104);
             this.panelPatients.TabIndex = 6;
@@ -387,7 +366,7 @@ namespace ProyectTopicosAvanzados
             this.buttonPatients.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.buttonPatients.IconSize = 30;
             this.buttonPatients.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonPatients.Location = new System.Drawing.Point(0, 344);
+            this.buttonPatients.Location = new System.Drawing.Point(0, 204);
             this.buttonPatients.Name = "buttonPatients";
             this.buttonPatients.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.buttonPatients.Size = new System.Drawing.Size(198, 50);
@@ -404,7 +383,7 @@ namespace ProyectTopicosAvanzados
             this.panelConsults.Controls.Add(this.buttonRegisterConsult);
             this.panelConsults.Controls.Add(this.buttonAllConsults);
             this.panelConsults.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelConsults.Location = new System.Drawing.Point(0, 240);
+            this.panelConsults.Location = new System.Drawing.Point(0, 100);
             this.panelConsults.Name = "panelConsults";
             this.panelConsults.Size = new System.Drawing.Size(198, 104);
             this.panelConsults.TabIndex = 4;
@@ -475,7 +454,7 @@ namespace ProyectTopicosAvanzados
             this.buttonConsults.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.buttonConsults.IconSize = 30;
             this.buttonConsults.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonConsults.Location = new System.Drawing.Point(0, 190);
+            this.buttonConsults.Location = new System.Drawing.Point(0, 50);
             this.buttonConsults.Name = "buttonConsults";
             this.buttonConsults.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.buttonConsults.Size = new System.Drawing.Size(198, 50);
@@ -489,6 +468,7 @@ namespace ProyectTopicosAvanzados
             // panelHeader
             // 
             this.panelHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(57)))), ((int)(((byte)(144)))));
+            this.panelHeader.Controls.Add(this.pictureBox1);
             this.panelHeader.Controls.Add(this.buttonClose);
             this.panelHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelHeader.Location = new System.Drawing.Point(215, 0);
@@ -538,12 +518,32 @@ namespace ProyectTopicosAvanzados
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(57)))), ((int)(((byte)(144)))));
+            this.panel1.Controls.Add(this.buttonHistory);
             this.panel1.Controls.Add(this.registerTreatment);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(215, 552);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(669, 69);
             this.panel1.TabIndex = 3;
+            // 
+            // buttonHistory
+            // 
+            this.buttonHistory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(86)))), ((int)(((byte)(163)))));
+            this.buttonHistory.FlatAppearance.BorderSize = 0;
+            this.buttonHistory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonHistory.ForeColor = System.Drawing.Color.White;
+            this.buttonHistory.IconChar = FontAwesome.Sharp.IconChar.History;
+            this.buttonHistory.IconColor = System.Drawing.Color.White;
+            this.buttonHistory.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.buttonHistory.IconSize = 15;
+            this.buttonHistory.Location = new System.Drawing.Point(189, 17);
+            this.buttonHistory.Name = "buttonHistory";
+            this.buttonHistory.Size = new System.Drawing.Size(159, 40);
+            this.buttonHistory.TabIndex = 39;
+            this.buttonHistory.Text = "Historial de tratamientos";
+            this.buttonHistory.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonHistory.UseVisualStyleBackColor = false;
+            this.buttonHistory.Click += new System.EventHandler(this.buttonHistory_Click);
             // 
             // registerTreatment
             // 
@@ -564,6 +564,17 @@ namespace ProyectTopicosAvanzados
             this.registerTreatment.UseVisualStyleBackColor = false;
             this.registerTreatment.Click += new System.EventHandler(this.registerTreatment_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(66, 59);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
             // Layout
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -578,8 +589,6 @@ namespace ProyectTopicosAvanzados
             this.Name = "Layout";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Previmed Clínica";
-            this.panelLogo.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.mainPanel.ResumeLayout(false);
             this.panelUnity.ResumeLayout(false);
             this.panelDoctors.ResumeLayout(false);
@@ -589,12 +598,12 @@ namespace ProyectTopicosAvanzados
             this.panelChildForm.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Panel panelLogo;
         private FontAwesome.Sharp.IconButton homeButton;
         private System.Windows.Forms.Panel mainPanel;
         private System.Windows.Forms.Panel panelConsults;
@@ -614,7 +623,6 @@ namespace ProyectTopicosAvanzados
         private System.Windows.Forms.Panel panelHeader;
         private System.Windows.Forms.Panel panelChildForm;
         private FontAwesome.Sharp.IconButton buttonClose;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private FontAwesome.Sharp.IconButton buttonDoctors;
         private System.Windows.Forms.Panel panelUnity;
         private System.Windows.Forms.Button button6;
@@ -624,6 +632,8 @@ namespace ProyectTopicosAvanzados
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private FontAwesome.Sharp.IconButton registerTreatment;
+        private FontAwesome.Sharp.IconButton buttonHistory;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

@@ -11,9 +11,9 @@ using System.Data.SqlClient;
 
 namespace ProyectTopicosAvanzados.Views
 {
-    public partial class Unity : Form
+    public partial class RegisterUnity : Form
     {
-        public Unity()
+        public RegisterUnity()
         {
             InitializeComponent();
         }
