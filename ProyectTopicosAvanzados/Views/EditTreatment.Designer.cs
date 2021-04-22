@@ -40,16 +40,20 @@
             this.textBoxDoctor = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBoxID = new System.Windows.Forms.TextBox();
+            this.textBoxID = new System.Windows.Forms.ComboBox();
             this.buttonSearchTreatment = new FontAwesome.Sharp.IconButton();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.textBoxConsult = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.textBoxConsult);
+            this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.buttonDeleteTreatment);
             this.panel2.Controls.Add(this.buttonUpdateTreatment);
             this.panel2.Controls.Add(this.textBoxDiary);
@@ -102,6 +106,7 @@
             this.buttonUpdateTreatment.Text = "Actualizar";
             this.buttonUpdateTreatment.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonUpdateTreatment.UseVisualStyleBackColor = false;
+            this.buttonUpdateTreatment.Click += new System.EventHandler(this.buttonUpdateTreatment_Click);
             // 
             // textBoxDiary
             // 
@@ -187,10 +192,11 @@
             // 
             // textBoxID
             // 
-            this.textBoxID.Location = new System.Drawing.Point(12, 68);
+            this.textBoxID.FormattingEnabled = true;
+            this.textBoxID.Location = new System.Drawing.Point(12, 77);
             this.textBoxID.Name = "textBoxID";
-            this.textBoxID.Size = new System.Drawing.Size(183, 20);
-            this.textBoxID.TabIndex = 25;
+            this.textBoxID.Size = new System.Drawing.Size(121, 21);
+            this.textBoxID.TabIndex = 26;
             // 
             // buttonSearchTreatment
             // 
@@ -231,6 +237,23 @@
             this.label1.TabIndex = 22;
             this.label1.Text = "Editar tratamiento";
             // 
+            // textBoxConsult
+            // 
+            this.textBoxConsult.Location = new System.Drawing.Point(12, 174);
+            this.textBoxConsult.Name = "textBoxConsult";
+            this.textBoxConsult.Size = new System.Drawing.Size(183, 20);
+            this.textBoxConsult.TabIndex = 50;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(9, 148);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(53, 13);
+            this.label3.TabIndex = 49;
+            this.label3.Text = "Consulta";
+            // 
             // EditTreatment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -261,10 +284,12 @@
         private System.Windows.Forms.TextBox textBoxDoctor;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBoxID;
         private FontAwesome.Sharp.IconButton buttonSearchTreatment;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private FontAwesome.Sharp.IconButton buttonDeleteTreatment;
+        private System.Windows.Forms.ComboBox textBoxID;
+        private System.Windows.Forms.TextBox textBoxConsult;
+        private System.Windows.Forms.Label label3;
     }
 }

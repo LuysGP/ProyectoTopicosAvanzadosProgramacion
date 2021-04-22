@@ -20,8 +20,37 @@ namespace ProyectTopicosAvanzados.Views
         public EditDoctor()
         {
             InitializeComponent();
+            SelectAllDoctors();
         }
+        private void SelectAllDoctors()
+        {
+            try
+            {
+                cnt.Open();
+                String query = "Select doctor_id FROM Doctor";
 
+                SqlCommand command = new SqlCommand(query, cnt);
+                SqlDataReader sqlDataReader = null;
+                try
+                {
+                    sqlDataReader = command.ExecuteReader();
+                }
+                catch (Exception err)
+                {
+                    MessageBox.Show(err.Message);
+                }
+                while (sqlDataReader.Read())
+                {
+                    textBoxDoctor.Items.Add(sqlDataReader[0]);
+                }
+                cnt.Close();
+
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
+            }
+        }
         private void buttonSearchDoctor_Click(object sender, EventArgs e)
         {
             try
@@ -64,7 +93,19 @@ namespace ProyectTopicosAvanzados.Views
             try
             {
                 cnt.Open();
-                String query = $"UPDATE doctor_id, doctor_speciality, doctor_name FROM Doctor WHERE doctor_id = {int.Parse(textBoxDoctor.Text)}";
+                String query = $"UPDATE doctor SET doctor_speciality=@speciality, doctor_name=@name WHERE doctor_id=@doctorID";
+
+                SqlCommand command = new SqlCommand(query, cnt);
+
+                command.Parameters.AddWithValue("@speciality", textBoxEspeciality.Text);
+                command.Parameters.AddWithValue("@name", textBoxName.Text);
+                command.Parameters.AddWithValue("@doctorID", doctorActual);
+
+                command.ExecuteNonQuery();
+
+                cnt.Close();
+
+                MessageBox.Show("Doctor actualizado correctamente");
             }
             catch (Exception err)
             {

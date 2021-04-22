@@ -31,24 +31,24 @@ namespace ProyectTopicosAvanzados.Views
         {
             this.panel2 = new System.Windows.Forms.Panel();
             this.buttonSearchDoctor = new FontAwesome.Sharp.IconButton();
-            this.textBoxDoctor = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.buttonDeleteDoctor = new FontAwesome.Sharp.IconButton();
             this.buttonUpdateDoctor = new FontAwesome.Sharp.IconButton();
             this.textBoxEspeciality = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textBoxName = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.buttonDeleteDoctor = new FontAwesome.Sharp.IconButton();
+            this.textBoxDoctor = new System.Windows.Forms.ComboBox();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.buttonSearchDoctor);
             this.panel2.Controls.Add(this.textBoxDoctor);
+            this.panel2.Controls.Add(this.buttonSearchDoctor);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -75,13 +75,6 @@ namespace ProyectTopicosAvanzados.Views
             this.buttonSearchDoctor.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonSearchDoctor.UseVisualStyleBackColor = false;
             this.buttonSearchDoctor.Click += new System.EventHandler(this.buttonSearchDoctor_Click);
-            // 
-            // textBoxDoctor
-            // 
-            this.textBoxDoctor.Location = new System.Drawing.Point(12, 77);
-            this.textBoxDoctor.Name = "textBoxDoctor";
-            this.textBoxDoctor.Size = new System.Drawing.Size(183, 20);
-            this.textBoxDoctor.TabIndex = 15;
             // 
             // label2
             // 
@@ -116,6 +109,25 @@ namespace ProyectTopicosAvanzados.Views
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 293);
             this.panel1.TabIndex = 18;
+            // 
+            // buttonDeleteDoctor
+            // 
+            this.buttonDeleteDoctor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(86)))), ((int)(((byte)(163)))));
+            this.buttonDeleteDoctor.FlatAppearance.BorderSize = 0;
+            this.buttonDeleteDoctor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonDeleteDoctor.ForeColor = System.Drawing.Color.White;
+            this.buttonDeleteDoctor.IconChar = FontAwesome.Sharp.IconChar.Check;
+            this.buttonDeleteDoctor.IconColor = System.Drawing.Color.White;
+            this.buttonDeleteDoctor.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.buttonDeleteDoctor.IconSize = 15;
+            this.buttonDeleteDoctor.Location = new System.Drawing.Point(117, 170);
+            this.buttonDeleteDoctor.Name = "buttonDeleteDoctor";
+            this.buttonDeleteDoctor.Size = new System.Drawing.Size(90, 30);
+            this.buttonDeleteDoctor.TabIndex = 45;
+            this.buttonDeleteDoctor.Text = "Eliminar";
+            this.buttonDeleteDoctor.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonDeleteDoctor.UseVisualStyleBackColor = false;
+            this.buttonDeleteDoctor.Click += new System.EventHandler(this.buttonDeleteDoctor_Click);
             // 
             // buttonUpdateDoctor
             // 
@@ -170,24 +182,13 @@ namespace ProyectTopicosAvanzados.Views
             this.label4.TabIndex = 40;
             this.label4.Text = "Nombre";
             // 
-            // buttonDeleteDoctor
+            // textBoxDoctor
             // 
-            this.buttonDeleteDoctor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(86)))), ((int)(((byte)(163)))));
-            this.buttonDeleteDoctor.FlatAppearance.BorderSize = 0;
-            this.buttonDeleteDoctor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonDeleteDoctor.ForeColor = System.Drawing.Color.White;
-            this.buttonDeleteDoctor.IconChar = FontAwesome.Sharp.IconChar.Check;
-            this.buttonDeleteDoctor.IconColor = System.Drawing.Color.White;
-            this.buttonDeleteDoctor.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.buttonDeleteDoctor.IconSize = 15;
-            this.buttonDeleteDoctor.Location = new System.Drawing.Point(117, 170);
-            this.buttonDeleteDoctor.Name = "buttonDeleteDoctor";
-            this.buttonDeleteDoctor.Size = new System.Drawing.Size(90, 30);
-            this.buttonDeleteDoctor.TabIndex = 45;
-            this.buttonDeleteDoctor.Text = "Eliminar";
-            this.buttonDeleteDoctor.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonDeleteDoctor.UseVisualStyleBackColor = false;
-            this.buttonDeleteDoctor.Click += new System.EventHandler(this.buttonDeleteDoctor_Click);
+            this.textBoxDoctor.FormattingEnabled = true;
+            this.textBoxDoctor.Location = new System.Drawing.Point(13, 68);
+            this.textBoxDoctor.Name = "textBoxDoctor";
+            this.textBoxDoctor.Size = new System.Drawing.Size(121, 21);
+            this.textBoxDoctor.TabIndex = 17;
             // 
             // EditDoctor
             // 
@@ -210,7 +211,6 @@ namespace ProyectTopicosAvanzados.Views
 
         private System.Windows.Forms.Panel panel2;
         private FontAwesome.Sharp.IconButton buttonSearchDoctor;
-        private System.Windows.Forms.TextBox textBoxDoctor;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
@@ -220,5 +220,6 @@ namespace ProyectTopicosAvanzados.Views
         private System.Windows.Forms.TextBox textBoxName;
         private System.Windows.Forms.Label label4;
         private FontAwesome.Sharp.IconButton buttonDeleteDoctor;
+        private System.Windows.Forms.ComboBox textBoxDoctor;
     }
 }

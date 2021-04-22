@@ -33,9 +33,9 @@ namespace ProyectTopicosAvanzados.Views
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.searchPatientButton = new FontAwesome.Sharp.IconButton();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.textBoxDoctor = new System.Windows.Forms.ComboBox();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -64,8 +64,8 @@ namespace ProyectTopicosAvanzados.Views
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.textBoxDoctor);
             this.panel2.Controls.Add(this.searchPatientButton);
-            this.panel2.Controls.Add(this.textBox1);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -92,13 +92,6 @@ namespace ProyectTopicosAvanzados.Views
             this.searchPatientButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.searchPatientButton.UseVisualStyleBackColor = false;
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(12, 77);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(183, 20);
-            this.textBox1.TabIndex = 15;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -118,6 +111,14 @@ namespace ProyectTopicosAvanzados.Views
             this.label1.Size = new System.Drawing.Size(96, 30);
             this.label1.TabIndex = 13;
             this.label1.Text = "Doctores";
+            // 
+            // textBoxDoctor
+            // 
+            this.textBoxDoctor.FormattingEnabled = true;
+            this.textBoxDoctor.Location = new System.Drawing.Point(12, 67);
+            this.textBoxDoctor.Name = "textBoxDoctor";
+            this.textBoxDoctor.Size = new System.Drawing.Size(121, 21);
+            this.textBoxDoctor.TabIndex = 17;
             // 
             // Doctors
             // 
@@ -142,8 +143,8 @@ namespace ProyectTopicosAvanzados.Views
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel2;
         private FontAwesome.Sharp.IconButton searchPatientButton;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox textBoxDoctor;
     }
 }

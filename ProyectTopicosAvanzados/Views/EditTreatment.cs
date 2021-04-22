@@ -20,8 +20,38 @@ namespace ProyectTopicosAvanzados.Views
         public EditTreatment()
         {
             InitializeComponent();
+            SelectAllTreatments();
         }
+        private void SelectAllTreatments()
+        {
+            try
+            {
+                conection.Open();
+                String query = "SELECT treatment_id FROM Treatment";
 
+                SqlCommand command = new SqlCommand(query, conection);
+                SqlDataReader sqlDataReader = null;
+                try
+                {
+                    sqlDataReader = command.ExecuteReader();
+                }
+                catch (Exception err)
+                {
+                    MessageBox.Show(err.Message);
+                }
+                while (sqlDataReader.Read())
+                {
+                    textBoxID.Items.Add(sqlDataReader[0]);
+                }
+                conection.Close();
+            }
+
+            catch (Exception err)
+            {
+
+                MessageBox.Show(err.Message);
+            }
+        }
         private void buttonSearchTreatment_Click(object sender, EventArgs e)
         {
             try
@@ -51,7 +81,9 @@ namespace ProyectTopicosAvanzados.Views
                     editTreatmentDetails.nurse = sqlDataReader[2].ToString();
                     textBoxNurse.Text = editTreatmentDetails.nurse;
 
-                    editTreatmentDetails.diary = sqlDataReader[3].ToString();
+                    textBoxConsult.Text = sqlDataReader[3].ToString();
+
+                    editTreatmentDetails.diary = sqlDataReader[4].ToString();
                     textBoxDiary.Text = editTreatmentDetails.diary;
 
                     actualTreatment = int.Parse(textBoxID.Text);
@@ -82,6 +114,33 @@ namespace ProyectTopicosAvanzados.Views
             catch (Exception err)
             {
                 MessageBox.Show(err.Message);
+            }
+        }
+
+        private void buttonUpdateTreatment_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                conection.Open();
+                string query = $"UPDATE Treatment SET tracing=@tracing, nurse=@nurse, register_id=@register, diary_evolution=@diary WHERE treatment_id=@id";
+
+                SqlCommand command = new SqlCommand(query, conection);
+
+                command.Parameters.AddWithValue("@tracing", textBoxTracing.Text);
+                command.Parameters.AddWithValue("@nurse", textBoxNurse.Text);
+                command.Parameters.AddWithValue("@register", int.Parse(textBoxConsult.Text));
+                command.Parameters.AddWithValue("@id", actualTreatment);
+                command.Parameters.AddWithValue("@diary", textBoxDiary.Text);
+
+                command.ExecuteNonQuery();
+
+                conection.Close();
+
+                MessageBox.Show("Tratamiento actualizado correctamente");
+            }
+            catch (Exception en)
+            {
+                MessageBox.Show(en.Message);
             }
         }
     }

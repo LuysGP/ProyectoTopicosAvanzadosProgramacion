@@ -40,8 +40,8 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.buttonSearchUnity = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBoxUnity = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.textBoxUnity = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -153,9 +153,9 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.textBoxUnity);
             this.panel2.Controls.Add(this.buttonSearchUnity);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.textBoxUnity);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
@@ -192,13 +192,6 @@
             this.label1.TabIndex = 15;
             this.label1.Text = "Detalles de la unidad";
             // 
-            // textBoxUnity
-            // 
-            this.textBoxUnity.Location = new System.Drawing.Point(12, 80);
-            this.textBoxUnity.Name = "textBoxUnity";
-            this.textBoxUnity.Size = new System.Drawing.Size(183, 20);
-            this.textBoxUnity.TabIndex = 48;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -208,6 +201,14 @@
             this.label5.Size = new System.Drawing.Size(80, 13);
             this.label5.TabIndex = 47;
             this.label5.Text = "Buscar unidad";
+            // 
+            // textBoxUnity
+            // 
+            this.textBoxUnity.FormattingEnabled = true;
+            this.textBoxUnity.Location = new System.Drawing.Point(12, 79);
+            this.textBoxUnity.Name = "textBoxUnity";
+            this.textBoxUnity.Size = new System.Drawing.Size(121, 21);
+            this.textBoxUnity.TabIndex = 50;
             // 
             // EditUnity
             // 
@@ -239,8 +240,8 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
         private FontAwesome.Sharp.IconButton buttonSearchUnity;
-        private System.Windows.Forms.TextBox textBoxUnity;
         private System.Windows.Forms.Label label5;
         private FontAwesome.Sharp.IconButton buttonDeleteUnity;
+        private System.Windows.Forms.ComboBox textBoxUnity;
     }
 }

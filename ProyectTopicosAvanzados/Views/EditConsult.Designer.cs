@@ -30,20 +30,20 @@ namespace ProyectTopicosAvanzados.Views
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBoxID = new System.Windows.Forms.TextBox();
             this.buttonSearchConsult = new FontAwesome.Sharp.IconButton();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.buttonDeleteConsult = new FontAwesome.Sharp.IconButton();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.textBoxRegister = new System.Windows.Forms.DateTimePicker();
+            this.label5 = new System.Windows.Forms.Label();
             this.textBoxSymptom = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.textBoxPatient = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.buttonUpdateConsult = new FontAwesome.Sharp.IconButton();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBoxRegister = new System.Windows.Forms.DateTimePicker();
+            this.textBoxID = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -60,13 +60,6 @@ namespace ProyectTopicosAvanzados.Views
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 144);
             this.panel1.TabIndex = 0;
-            // 
-            // textBoxID
-            // 
-            this.textBoxID.Location = new System.Drawing.Point(12, 68);
-            this.textBoxID.Name = "textBoxID";
-            this.textBoxID.Size = new System.Drawing.Size(183, 20);
-            this.textBoxID.TabIndex = 25;
             // 
             // buttonSearchConsult
             // 
@@ -151,6 +144,23 @@ namespace ProyectTopicosAvanzados.Views
             this.panel3.Size = new System.Drawing.Size(800, 305);
             this.panel3.TabIndex = 48;
             // 
+            // textBoxRegister
+            // 
+            this.textBoxRegister.Location = new System.Drawing.Point(17, 186);
+            this.textBoxRegister.Name = "textBoxRegister";
+            this.textBoxRegister.Size = new System.Drawing.Size(200, 20);
+            this.textBoxRegister.TabIndex = 34;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(14, 156);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(37, 13);
+            this.label5.TabIndex = 33;
+            this.label5.Text = "Fecha";
+            // 
             // textBoxSymptom
             // 
             this.textBoxSymptom.Location = new System.Drawing.Point(17, 104);
@@ -204,22 +214,13 @@ namespace ProyectTopicosAvanzados.Views
             this.buttonUpdateConsult.UseVisualStyleBackColor = false;
             this.buttonUpdateConsult.Click += new System.EventHandler(this.buttonUpdateConsult_Click);
             // 
-            // label5
+            // textBoxID
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(14, 156);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(37, 13);
-            this.label5.TabIndex = 33;
-            this.label5.Text = "Fecha";
-            // 
-            // textBoxRegister
-            // 
-            this.textBoxRegister.Location = new System.Drawing.Point(17, 186);
-            this.textBoxRegister.Name = "textBoxRegister";
-            this.textBoxRegister.Size = new System.Drawing.Size(200, 20);
-            this.textBoxRegister.TabIndex = 34;
+            this.textBoxID.FormattingEnabled = true;
+            this.textBoxID.Location = new System.Drawing.Point(12, 77);
+            this.textBoxID.Name = "textBoxID";
+            this.textBoxID.Size = new System.Drawing.Size(121, 21);
+            this.textBoxID.TabIndex = 25;
             // 
             // EditConsult
             // 
@@ -242,7 +243,6 @@ namespace ProyectTopicosAvanzados.Views
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBoxID;
         private FontAwesome.Sharp.IconButton buttonSearchConsult;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
@@ -256,5 +256,6 @@ namespace ProyectTopicosAvanzados.Views
         private FontAwesome.Sharp.IconButton buttonDeleteConsult;
         private System.Windows.Forms.DateTimePicker textBoxRegister;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox textBoxID;
     }
 }

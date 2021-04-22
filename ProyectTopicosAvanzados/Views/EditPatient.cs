@@ -19,8 +19,39 @@ namespace ProyectTopicosAvanzados.Views
         public EditPatient()
         {
             InitializeComponent();
+            SelectAllPatients();
         }
+        private void SelectAllPatients()
+        {
+            try
+            {
+                conection.Open();
+                String query = "SELECT SS_number FROM Patient";
 
+                SqlCommand command = new SqlCommand(query, conection);
+                SqlDataReader sqlDataReader = null;
+                try
+                {
+                    sqlDataReader = command.ExecuteReader();
+                }
+                catch (Exception err)
+                {
+                    MessageBox.Show(err.Message);
+                }
+                while (sqlDataReader.Read())
+                {
+                    textBoxSS.Items.Add(sqlDataReader[0]);
+                }
+                conection.Close();
+            }
+
+            catch (Exception err)
+            {
+
+                MessageBox.Show(err.Message);
+            }
+
+        }
         private void searchPatientButton_Click(object sender, EventArgs e)
         {
             try
@@ -46,6 +77,7 @@ namespace ProyectTopicosAvanzados.Views
                     patient.date = (DateTime)sqlDataReader[1];
                     dateTimePicker1.Value = patient.date;
                     patient.unity = int.Parse(sqlDataReader[2].ToString());
+                    textBoxUnity.Text = patient.unity.ToString();
                     patient.name = sqlDataReader[3].ToString();
                     textBoxName.Text = patient.name;
 
@@ -66,7 +98,22 @@ namespace ProyectTopicosAvanzados.Views
             try
             {
                 conection.Open();
-                String query = $"UPDATE patient_age, date_entry, unity_id, patient_name FROM Patient WHERE SS_number = {int.Parse(textBoxSS.Text)}";
+                String query = $"UPDATE patient SET patient_age=@age, date_entry=@date, patient_name=@name, unity_id=@unityID WHERE SS_number=@ss";
+
+                SqlCommand command = new SqlCommand(query, conection);
+
+                command.Parameters.AddWithValue("@age", textBoxAge.Text);
+                command.Parameters.AddWithValue("@date", dateTimePicker1.Value);
+                command.Parameters.AddWithValue("@name", textBoxName.Text);
+                command.Parameters.AddWithValue("@unityID", textBoxUnity.Text);
+                command.Parameters.AddWithValue("@ss", actualPatient);
+
+                command.ExecuteNonQuery();
+
+                conection.Close();
+
+                MessageBox.Show("Paciente actualizado correctamente");
+
             }
             catch (Exception err)
             {

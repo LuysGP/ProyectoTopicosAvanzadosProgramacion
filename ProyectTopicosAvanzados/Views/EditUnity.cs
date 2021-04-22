@@ -20,11 +20,64 @@ namespace ProyectTopicosAvanzados.Views
         public EditUnity()
         {
             InitializeComponent();
+            SelectAllUnits();
+        }
+
+        private void SelectAllUnits()
+        {
+            try
+            {
+                conection.Open();
+                String query = "SELECT unity_id FROM Unity";
+
+                SqlCommand command = new SqlCommand(query, conection);
+                SqlDataReader sqlDataReader = null;
+                try
+                {
+                    sqlDataReader = command.ExecuteReader();
+                }
+                catch (Exception err)
+                {
+                    MessageBox.Show(err.Message);
+                }
+                while (sqlDataReader.Read())
+                {
+                    textBoxUnity.Items.Add(sqlDataReader[0]);
+                }
+                conection.Close();
+            }
+
+            catch (Exception err)
+            {
+
+                MessageBox.Show(err.Message);
+            }
+
         }
 
         private void buttonUpdateUnit_Click(object sender, EventArgs e)
         {
+            try
+            {
+                conection.Open();
+                String query = @"UPDATE unity SET unity_name=@name, unity_plant=@plant, doctor_id=@doctorID WHERE unity_id=@unityID";
+                SqlCommand command = new SqlCommand(query,conection);
 
+                command.Parameters.AddWithValue("@name", textBoxName.Text);
+                command.Parameters.AddWithValue("@plant", textBoxPlant.Text);
+                command.Parameters.AddWithValue("@doctorID", textBoxDoctorId.Text);
+                command.Parameters.AddWithValue("@unityID", actualUnity);
+
+                command.ExecuteNonQuery();
+
+                conection.Close();
+
+                MessageBox.Show("Unidad actualizada correctamente");
+            }
+            catch(Exception err)
+            {
+                MessageBox.Show(err.Message);
+            }
         }
 
         private void buttonDeleteUnity_Click(object sender, EventArgs e)
@@ -74,8 +127,15 @@ namespace ProyectTopicosAvanzados.Views
                     EditUnityDetails.plant = SqlDataReader[1].ToString();
                     textBoxPlant.Text = EditUnityDetails.plant;
 
-                    EditUnityDetails.doctor = int.Parse(SqlDataReader[2].ToString());
-                    textBoxDoctorId.Text = EditUnityDetails.doctor.ToString();
+                    if (SqlDataReader[2].ToString().Length == 0)
+                    {
+                        textBoxDoctorId.Text = "0";
+                    }
+                    else
+                    {
+                        EditUnityDetails.doctor = int.Parse(SqlDataReader[2].ToString());
+                        textBoxDoctorId.Text = EditUnityDetails.doctor.ToString();
+                    }
 
                     actualUnity = int.Parse(textBoxUnity.Text);
                 }

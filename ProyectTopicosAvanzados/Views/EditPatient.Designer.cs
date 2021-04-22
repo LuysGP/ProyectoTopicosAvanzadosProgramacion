@@ -30,8 +30,8 @@ namespace ProyectTopicosAvanzados.Views
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
+            this.textBoxSS = new System.Windows.Forms.ComboBox();
             this.searchPatientButton = new FontAwesome.Sharp.IconButton();
-            this.textBoxSS = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -43,14 +43,16 @@ namespace ProyectTopicosAvanzados.Views
             this.label3 = new System.Windows.Forms.Label();
             this.textBoxName = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.textBoxUnity = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.searchPatientButton);
             this.panel2.Controls.Add(this.textBoxSS);
+            this.panel2.Controls.Add(this.searchPatientButton);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -58,6 +60,14 @@ namespace ProyectTopicosAvanzados.Views
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(800, 146);
             this.panel2.TabIndex = 15;
+            // 
+            // textBoxSS
+            // 
+            this.textBoxSS.FormattingEnabled = true;
+            this.textBoxSS.Location = new System.Drawing.Point(12, 67);
+            this.textBoxSS.Name = "textBoxSS";
+            this.textBoxSS.Size = new System.Drawing.Size(121, 21);
+            this.textBoxSS.TabIndex = 20;
             // 
             // searchPatientButton
             // 
@@ -77,13 +87,6 @@ namespace ProyectTopicosAvanzados.Views
             this.searchPatientButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.searchPatientButton.UseVisualStyleBackColor = false;
             this.searchPatientButton.Click += new System.EventHandler(this.searchPatientButton_Click);
-            // 
-            // textBoxSS
-            // 
-            this.textBoxSS.Location = new System.Drawing.Point(12, 77);
-            this.textBoxSS.Name = "textBoxSS";
-            this.textBoxSS.Size = new System.Drawing.Size(183, 20);
-            this.textBoxSS.TabIndex = 18;
             // 
             // label2
             // 
@@ -107,6 +110,8 @@ namespace ProyectTopicosAvanzados.Views
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.textBoxUnity);
+            this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.buttonDelete);
             this.panel1.Controls.Add(this.dateTimePicker1);
             this.panel1.Controls.Add(this.buttonRegisterConsult);
@@ -213,6 +218,23 @@ namespace ProyectTopicosAvanzados.Views
             this.label5.TabIndex = 40;
             this.label5.Text = "Nombre";
             // 
+            // textBoxUnity
+            // 
+            this.textBoxUnity.Location = new System.Drawing.Point(256, 37);
+            this.textBoxUnity.Name = "textBoxUnity";
+            this.textBoxUnity.Size = new System.Drawing.Size(183, 20);
+            this.textBoxUnity.TabIndex = 51;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(253, 11);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(45, 13);
+            this.label6.TabIndex = 50;
+            this.label6.Text = "Unidad";
+            // 
             // EditPatient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -242,9 +264,11 @@ namespace ProyectTopicosAvanzados.Views
         private System.Windows.Forms.TextBox textBoxName;
         private System.Windows.Forms.Label label5;
         private FontAwesome.Sharp.IconButton searchPatientButton;
-        private System.Windows.Forms.TextBox textBoxSS;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private FontAwesome.Sharp.IconButton buttonDelete;
+        private System.Windows.Forms.ComboBox textBoxSS;
+        private System.Windows.Forms.TextBox textBoxUnity;
+        private System.Windows.Forms.Label label6;
     }
 }

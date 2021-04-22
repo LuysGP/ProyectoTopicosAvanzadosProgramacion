@@ -19,8 +19,38 @@ namespace ProyectTopicosAvanzados.Views
         public EditConsult()
         {
             InitializeComponent();
+            SelectAllConsults();
         }
+        private void SelectAllConsults()
+        {
+            try
+            {
+                cnt.Open();
+                String query = "SELECT register_id FROM Register";
 
+                SqlCommand command = new SqlCommand(query, cnt);
+                SqlDataReader sqlDataReader = null;
+                try
+                {
+                    sqlDataReader = command.ExecuteReader();
+                }
+                catch (Exception err)
+                {
+                    MessageBox.Show(err.Message);
+                }
+                while (sqlDataReader.Read())
+                {
+                    textBoxID.Items.Add(sqlDataReader[0]);
+                }
+                cnt.Close();
+            }
+
+            catch (Exception err)
+            {
+
+                MessageBox.Show(err.Message);
+            }
+        }
         private void buttonUpdateConsult_Click(object sender, EventArgs e)
         {
             try
@@ -39,7 +69,7 @@ namespace ProyectTopicosAvanzados.Views
 
                 cnt.Close();
 
-                MessageBox.Show("Paciente actualizado correctamente");
+                MessageBox.Show("Consulta actualizada correctamente");
             }
             catch (Exception en)
             {
@@ -76,7 +106,6 @@ namespace ProyectTopicosAvanzados.Views
 
                 SqlCommand command = new SqlCommand(query, cnt);
                 SqlDataReader sqlDataReader = null;
-
                 try
                 {
                     sqlDataReader = command.ExecuteReader();
@@ -85,7 +114,6 @@ namespace ProyectTopicosAvanzados.Views
                 {
                     MessageBox.Show(err.Message);
                 }
-
                 while (sqlDataReader.Read())
                 {
                     consult.registerDate = (DateTime)sqlDataReader[0];
@@ -96,7 +124,7 @@ namespace ProyectTopicosAvanzados.Views
                     if(sqlDataReader[2].ToString().Length == 0)
                     {
                         consult.SS_number = 0;
-                        textBoxPatient.Text = "Paciente eliminado";
+                        textBoxPatient.Text = "0";
                     }
                     else
                     {
