@@ -30,24 +30,25 @@ namespace ProyectTopicosAvanzados.Views
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
-            this.searchPatientButton = new FontAwesome.Sharp.IconButton();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.buttonSearchDoctor = new FontAwesome.Sharp.IconButton();
+            this.textBoxDoctor = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.buttonRegisterConsult = new FontAwesome.Sharp.IconButton();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.buttonUpdateDoctor = new FontAwesome.Sharp.IconButton();
+            this.textBoxEspeciality = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBoxName = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.buttonDeleteDoctor = new FontAwesome.Sharp.IconButton();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.searchPatientButton);
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.buttonSearchDoctor);
+            this.panel2.Controls.Add(this.textBoxDoctor);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -56,30 +57,31 @@ namespace ProyectTopicosAvanzados.Views
             this.panel2.Size = new System.Drawing.Size(800, 157);
             this.panel2.TabIndex = 17;
             // 
-            // searchPatientButton
+            // buttonSearchDoctor
             // 
-            this.searchPatientButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(86)))), ((int)(((byte)(163)))));
-            this.searchPatientButton.FlatAppearance.BorderSize = 0;
-            this.searchPatientButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.searchPatientButton.ForeColor = System.Drawing.Color.White;
-            this.searchPatientButton.IconChar = FontAwesome.Sharp.IconChar.Search;
-            this.searchPatientButton.IconColor = System.Drawing.Color.White;
-            this.searchPatientButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.searchPatientButton.IconSize = 15;
-            this.searchPatientButton.Location = new System.Drawing.Point(12, 103);
-            this.searchPatientButton.Name = "searchPatientButton";
-            this.searchPatientButton.Size = new System.Drawing.Size(90, 30);
-            this.searchPatientButton.TabIndex = 16;
-            this.searchPatientButton.Text = "Buscar";
-            this.searchPatientButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.searchPatientButton.UseVisualStyleBackColor = false;
+            this.buttonSearchDoctor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(86)))), ((int)(((byte)(163)))));
+            this.buttonSearchDoctor.FlatAppearance.BorderSize = 0;
+            this.buttonSearchDoctor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSearchDoctor.ForeColor = System.Drawing.Color.White;
+            this.buttonSearchDoctor.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.buttonSearchDoctor.IconColor = System.Drawing.Color.White;
+            this.buttonSearchDoctor.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.buttonSearchDoctor.IconSize = 15;
+            this.buttonSearchDoctor.Location = new System.Drawing.Point(12, 103);
+            this.buttonSearchDoctor.Name = "buttonSearchDoctor";
+            this.buttonSearchDoctor.Size = new System.Drawing.Size(90, 30);
+            this.buttonSearchDoctor.TabIndex = 16;
+            this.buttonSearchDoctor.Text = "Buscar";
+            this.buttonSearchDoctor.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonSearchDoctor.UseVisualStyleBackColor = false;
+            this.buttonSearchDoctor.Click += new System.EventHandler(this.buttonSearchDoctor_Click);
             // 
-            // textBox1
+            // textBoxDoctor
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 77);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(183, 20);
-            this.textBox1.TabIndex = 15;
+            this.textBoxDoctor.Location = new System.Drawing.Point(12, 77);
+            this.textBoxDoctor.Name = "textBoxDoctor";
+            this.textBoxDoctor.Size = new System.Drawing.Size(183, 20);
+            this.textBoxDoctor.TabIndex = 15;
             // 
             // label2
             // 
@@ -103,10 +105,11 @@ namespace ProyectTopicosAvanzados.Views
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.buttonRegisterConsult);
-            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.buttonDeleteDoctor);
+            this.panel1.Controls.Add(this.buttonUpdateDoctor);
+            this.panel1.Controls.Add(this.textBoxEspeciality);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.textBox3);
+            this.panel1.Controls.Add(this.textBoxName);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 157);
@@ -114,30 +117,31 @@ namespace ProyectTopicosAvanzados.Views
             this.panel1.Size = new System.Drawing.Size(800, 293);
             this.panel1.TabIndex = 18;
             // 
-            // buttonRegisterConsult
+            // buttonUpdateDoctor
             // 
-            this.buttonRegisterConsult.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(86)))), ((int)(((byte)(163)))));
-            this.buttonRegisterConsult.FlatAppearance.BorderSize = 0;
-            this.buttonRegisterConsult.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonRegisterConsult.ForeColor = System.Drawing.Color.White;
-            this.buttonRegisterConsult.IconChar = FontAwesome.Sharp.IconChar.Check;
-            this.buttonRegisterConsult.IconColor = System.Drawing.Color.White;
-            this.buttonRegisterConsult.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.buttonRegisterConsult.IconSize = 15;
-            this.buttonRegisterConsult.Location = new System.Drawing.Point(12, 170);
-            this.buttonRegisterConsult.Name = "buttonRegisterConsult";
-            this.buttonRegisterConsult.Size = new System.Drawing.Size(90, 30);
-            this.buttonRegisterConsult.TabIndex = 44;
-            this.buttonRegisterConsult.Text = "Registrar";
-            this.buttonRegisterConsult.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonRegisterConsult.UseVisualStyleBackColor = false;
+            this.buttonUpdateDoctor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(86)))), ((int)(((byte)(163)))));
+            this.buttonUpdateDoctor.FlatAppearance.BorderSize = 0;
+            this.buttonUpdateDoctor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonUpdateDoctor.ForeColor = System.Drawing.Color.White;
+            this.buttonUpdateDoctor.IconChar = FontAwesome.Sharp.IconChar.Check;
+            this.buttonUpdateDoctor.IconColor = System.Drawing.Color.White;
+            this.buttonUpdateDoctor.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.buttonUpdateDoctor.IconSize = 15;
+            this.buttonUpdateDoctor.Location = new System.Drawing.Point(12, 170);
+            this.buttonUpdateDoctor.Name = "buttonUpdateDoctor";
+            this.buttonUpdateDoctor.Size = new System.Drawing.Size(90, 30);
+            this.buttonUpdateDoctor.TabIndex = 44;
+            this.buttonUpdateDoctor.Text = "Actualizar";
+            this.buttonUpdateDoctor.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonUpdateDoctor.UseVisualStyleBackColor = false;
+            this.buttonUpdateDoctor.Click += new System.EventHandler(this.buttonUpdateDoctor_Click);
             // 
-            // textBox2
+            // textBoxEspeciality
             // 
-            this.textBox2.Location = new System.Drawing.Point(12, 104);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(183, 20);
-            this.textBox2.TabIndex = 43;
+            this.textBoxEspeciality.Location = new System.Drawing.Point(12, 104);
+            this.textBoxEspeciality.Name = "textBoxEspeciality";
+            this.textBoxEspeciality.Size = new System.Drawing.Size(183, 20);
+            this.textBoxEspeciality.TabIndex = 43;
             // 
             // label3
             // 
@@ -149,12 +153,12 @@ namespace ProyectTopicosAvanzados.Views
             this.label3.TabIndex = 42;
             this.label3.Text = "Especialidad";
             // 
-            // textBox3
+            // textBoxName
             // 
-            this.textBox3.Location = new System.Drawing.Point(12, 39);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(183, 20);
-            this.textBox3.TabIndex = 41;
+            this.textBoxName.Location = new System.Drawing.Point(12, 39);
+            this.textBoxName.Name = "textBoxName";
+            this.textBoxName.Size = new System.Drawing.Size(183, 20);
+            this.textBoxName.TabIndex = 41;
             // 
             // label4
             // 
@@ -165,6 +169,25 @@ namespace ProyectTopicosAvanzados.Views
             this.label4.Size = new System.Drawing.Size(48, 13);
             this.label4.TabIndex = 40;
             this.label4.Text = "Nombre";
+            // 
+            // buttonDeleteDoctor
+            // 
+            this.buttonDeleteDoctor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(86)))), ((int)(((byte)(163)))));
+            this.buttonDeleteDoctor.FlatAppearance.BorderSize = 0;
+            this.buttonDeleteDoctor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonDeleteDoctor.ForeColor = System.Drawing.Color.White;
+            this.buttonDeleteDoctor.IconChar = FontAwesome.Sharp.IconChar.Check;
+            this.buttonDeleteDoctor.IconColor = System.Drawing.Color.White;
+            this.buttonDeleteDoctor.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.buttonDeleteDoctor.IconSize = 15;
+            this.buttonDeleteDoctor.Location = new System.Drawing.Point(117, 170);
+            this.buttonDeleteDoctor.Name = "buttonDeleteDoctor";
+            this.buttonDeleteDoctor.Size = new System.Drawing.Size(90, 30);
+            this.buttonDeleteDoctor.TabIndex = 45;
+            this.buttonDeleteDoctor.Text = "Eliminar";
+            this.buttonDeleteDoctor.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonDeleteDoctor.UseVisualStyleBackColor = false;
+            this.buttonDeleteDoctor.Click += new System.EventHandler(this.buttonDeleteDoctor_Click);
             // 
             // EditDoctor
             // 
@@ -186,15 +209,16 @@ namespace ProyectTopicosAvanzados.Views
         #endregion
 
         private System.Windows.Forms.Panel panel2;
-        private FontAwesome.Sharp.IconButton searchPatientButton;
-        private System.Windows.Forms.TextBox textBox1;
+        private FontAwesome.Sharp.IconButton buttonSearchDoctor;
+        private System.Windows.Forms.TextBox textBoxDoctor;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
-        private FontAwesome.Sharp.IconButton buttonRegisterConsult;
-        private System.Windows.Forms.TextBox textBox2;
+        private FontAwesome.Sharp.IconButton buttonUpdateDoctor;
+        private System.Windows.Forms.TextBox textBoxEspeciality;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBoxName;
         private System.Windows.Forms.Label label4;
+        private FontAwesome.Sharp.IconButton buttonDeleteDoctor;
     }
 }

@@ -53,3 +53,5 @@ C:\Users\gues\source\repos\ProyectoClinica\ProyectoTopicosAvanzadosProgramacion\
 C:\Users\gues\source\repos\ProyectoClinica\ProyectoTopicosAvanzadosProgramacion\ProyectTopicosAvanzados\obj\Debug\ProyectTopicosAvanzados.Views.Treatments.resources
 C:\Users\gues\source\repos\ProyectoClinica\ProyectoTopicosAvanzadosProgramacion\ProyectTopicosAvanzados\obj\Debug\ProyectTopicosAvanzados.Views.RegisterUnity.resources
 C:\Users\gues\source\repos\ProyectoClinica\ProyectoTopicosAvanzadosProgramacion\ProyectTopicosAvanzados\obj\Debug\ProyectTopicosAvanzados.Views.Units.resources
+C:\Users\gues\source\repos\ProyectoClinica\ProyectoTopicosAvanzadosProgramacion\ProyectTopicosAvanzados\obj\Debug\ProyectTopicosAvanzados.Views.EditTreatment.resources
+C:\Users\gues\source\repos\ProyectoClinica\ProyectoTopicosAvanzadosProgramacion\ProyectTopicosAvanzados\obj\Debug\ProyectTopicosAvanzados.Views.EditUnity.resources

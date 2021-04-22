@@ -23,7 +23,6 @@ namespace ProyectTopicosAvanzados.Views
 
         private void searchPatientButton_Click(object sender, EventArgs e)
         {
-
             try
             {
                 conection.Open();
@@ -61,6 +60,40 @@ namespace ProyectTopicosAvanzados.Views
                 MessageBox.Show(err.Message);
             }
         }
+
+        private void buttonRegisterConsult_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                conection.Open();
+                String query = $"UPDATE patient_age, date_entry, unity_id, patient_name FROM Patient WHERE SS_number = {int.Parse(textBoxSS.Text)}";
+            }
+            catch (Exception err)
+            {
+
+                MessageBox.Show(err.Message);
+            }
+        }
+
+        private void buttonDelete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                conection.Open();
+                String query = "DELETE FROM Patient WHERE SS_number=@patientId";
+
+                SqlCommand command = new SqlCommand(query, conection);
+                command.Parameters.AddWithValue("patientId", actualPatient);
+                command.ExecuteNonQuery();
+                MessageBox.Show("Paciente eliminado correctamente");
+
+                conection.Close();
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
+            }
+        }
     }
     public class EditPatientDetails
     {
@@ -69,12 +102,6 @@ namespace ProyectTopicosAvanzados.Views
         public int age;
         public string name;
         public EditPatientDetails() { }
-        public EditPatientDetails(int unity, int age, string name, DateTime date)
-        {
-            this.name = name;
-            this.age = age;
-            this.date = date;
-            this.unity = unity;
-        }
+       
     }
 }

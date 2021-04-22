@@ -246,5 +246,15 @@ namespace ProyectTopicosAvanzados
         {
             OpenChildForm(new Units());
         }
+
+        private void editTreatment_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new EditTreatment());
+        }
+
+        private void button6_Click_1(object sender, EventArgs e)
+        {
+            OpenChildForm(new EditUnity());
+        }
     }
 }

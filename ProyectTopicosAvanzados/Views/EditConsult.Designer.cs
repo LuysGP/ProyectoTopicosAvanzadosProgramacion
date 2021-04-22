@@ -30,30 +30,29 @@ namespace ProyectTopicosAvanzados.Views
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.searchPatientButton = new FontAwesome.Sharp.IconButton();
+            this.textBoxID = new System.Windows.Forms.TextBox();
+            this.buttonSearchConsult = new FontAwesome.Sharp.IconButton();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.buttonDeleteConsult = new FontAwesome.Sharp.IconButton();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.textBoxSymptom = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBoxPatient = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.buttonRegisterConsult = new FontAwesome.Sharp.IconButton();
+            this.buttonUpdateConsult = new FontAwesome.Sharp.IconButton();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBoxRegister = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.searchPatientButton);
+            this.panel1.Controls.Add(this.textBoxID);
+            this.panel1.Controls.Add(this.buttonSearchConsult);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -62,30 +61,31 @@ namespace ProyectTopicosAvanzados.Views
             this.panel1.Size = new System.Drawing.Size(800, 144);
             this.panel1.TabIndex = 0;
             // 
-            // textBox1
+            // textBoxID
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 68);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(183, 20);
-            this.textBox1.TabIndex = 25;
+            this.textBoxID.Location = new System.Drawing.Point(12, 68);
+            this.textBoxID.Name = "textBoxID";
+            this.textBoxID.Size = new System.Drawing.Size(183, 20);
+            this.textBoxID.TabIndex = 25;
             // 
-            // searchPatientButton
+            // buttonSearchConsult
             // 
-            this.searchPatientButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(86)))), ((int)(((byte)(163)))));
-            this.searchPatientButton.FlatAppearance.BorderSize = 0;
-            this.searchPatientButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.searchPatientButton.ForeColor = System.Drawing.Color.White;
-            this.searchPatientButton.IconChar = FontAwesome.Sharp.IconChar.Search;
-            this.searchPatientButton.IconColor = System.Drawing.Color.White;
-            this.searchPatientButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.searchPatientButton.IconSize = 15;
-            this.searchPatientButton.Location = new System.Drawing.Point(12, 104);
-            this.searchPatientButton.Name = "searchPatientButton";
-            this.searchPatientButton.Size = new System.Drawing.Size(90, 30);
-            this.searchPatientButton.TabIndex = 24;
-            this.searchPatientButton.Text = "Buscar";
-            this.searchPatientButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.searchPatientButton.UseVisualStyleBackColor = false;
+            this.buttonSearchConsult.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(86)))), ((int)(((byte)(163)))));
+            this.buttonSearchConsult.FlatAppearance.BorderSize = 0;
+            this.buttonSearchConsult.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSearchConsult.ForeColor = System.Drawing.Color.White;
+            this.buttonSearchConsult.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.buttonSearchConsult.IconColor = System.Drawing.Color.White;
+            this.buttonSearchConsult.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.buttonSearchConsult.IconSize = 15;
+            this.buttonSearchConsult.Location = new System.Drawing.Point(12, 104);
+            this.buttonSearchConsult.Name = "buttonSearchConsult";
+            this.buttonSearchConsult.Size = new System.Drawing.Size(90, 30);
+            this.buttonSearchConsult.TabIndex = 24;
+            this.buttonSearchConsult.Text = "Buscar";
+            this.buttonSearchConsult.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonSearchConsult.UseVisualStyleBackColor = false;
+            this.buttonSearchConsult.Click += new System.EventHandler(this.buttonSearchConsult_Click);
             // 
             // label2
             // 
@@ -109,127 +109,117 @@ namespace ProyectTopicosAvanzados.Views
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.buttonRegisterConsult);
-            this.panel2.Controls.Add(this.textBox5);
-            this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.textBox4);
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.textBox3);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.textBox2);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.textBox6);
-            this.panel2.Controls.Add(this.label7);
+            this.panel2.Controls.Add(this.buttonDeleteConsult);
+            this.panel2.Controls.Add(this.panel3);
+            this.panel2.Controls.Add(this.buttonUpdateConsult);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 144);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(800, 392);
             this.panel2.TabIndex = 1;
             // 
-            // textBox5
+            // buttonDeleteConsult
             // 
-            this.textBox5.Location = new System.Drawing.Point(289, 174);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(281, 85);
-            this.textBox5.TabIndex = 46;
+            this.buttonDeleteConsult.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(86)))), ((int)(((byte)(163)))));
+            this.buttonDeleteConsult.FlatAppearance.BorderSize = 0;
+            this.buttonDeleteConsult.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonDeleteConsult.ForeColor = System.Drawing.Color.White;
+            this.buttonDeleteConsult.IconChar = FontAwesome.Sharp.IconChar.Check;
+            this.buttonDeleteConsult.IconColor = System.Drawing.Color.White;
+            this.buttonDeleteConsult.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.buttonDeleteConsult.IconSize = 15;
+            this.buttonDeleteConsult.Location = new System.Drawing.Point(141, 303);
+            this.buttonDeleteConsult.Name = "buttonDeleteConsult";
+            this.buttonDeleteConsult.Size = new System.Drawing.Size(90, 30);
+            this.buttonDeleteConsult.TabIndex = 49;
+            this.buttonDeleteConsult.Text = "Eliminar";
+            this.buttonDeleteConsult.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonDeleteConsult.UseVisualStyleBackColor = false;
+            this.buttonDeleteConsult.Click += new System.EventHandler(this.buttonDeleteConsult_Click);
             // 
-            // label6
+            // panel3
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(286, 148);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(89, 13);
-            this.label6.TabIndex = 45;
-            this.label6.Text = "Evolución diaria";
+            this.panel3.Controls.Add(this.textBoxRegister);
+            this.panel3.Controls.Add(this.label5);
+            this.panel3.Controls.Add(this.textBoxSymptom);
+            this.panel3.Controls.Add(this.label4);
+            this.panel3.Controls.Add(this.textBoxPatient);
+            this.panel3.Controls.Add(this.label3);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(800, 305);
+            this.panel3.TabIndex = 48;
             // 
-            // textBox4
+            // textBoxSymptom
             // 
-            this.textBox4.Location = new System.Drawing.Point(289, 37);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(281, 85);
-            this.textBox4.TabIndex = 44;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(286, 11);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(72, 13);
-            this.label5.TabIndex = 43;
-            this.label5.Text = "Seguimiento";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(15, 174);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(183, 20);
-            this.textBox3.TabIndex = 42;
+            this.textBoxSymptom.Location = new System.Drawing.Point(17, 104);
+            this.textBoxSymptom.Name = "textBoxSymptom";
+            this.textBoxSymptom.Size = new System.Drawing.Size(183, 20);
+            this.textBoxSymptom.TabIndex = 32;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(12, 148);
+            this.label4.Location = new System.Drawing.Point(14, 78);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(59, 13);
-            this.label4.TabIndex = 41;
-            this.label4.Text = "Enfermera";
+            this.label4.Size = new System.Drawing.Size(54, 13);
+            this.label4.TabIndex = 31;
+            this.label4.Text = "Sintomas";
             // 
-            // textBox2
+            // textBoxPatient
             // 
-            this.textBox2.Location = new System.Drawing.Point(15, 102);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(183, 20);
-            this.textBox2.TabIndex = 40;
+            this.textBoxPatient.Location = new System.Drawing.Point(17, 32);
+            this.textBoxPatient.Name = "textBoxPatient";
+            this.textBoxPatient.Size = new System.Drawing.Size(183, 20);
+            this.textBoxPatient.TabIndex = 30;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(12, 76);
+            this.label3.Location = new System.Drawing.Point(14, 6);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(50, 13);
-            this.label3.TabIndex = 39;
-            this.label3.Text = "Paciente";
+            this.label3.Size = new System.Drawing.Size(65, 13);
+            this.label3.TabIndex = 29;
+            this.label3.Text = "Paciente SS";
             // 
-            // textBox6
+            // buttonUpdateConsult
             // 
-            this.textBox6.Location = new System.Drawing.Point(15, 37);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(183, 20);
-            this.textBox6.TabIndex = 38;
+            this.buttonUpdateConsult.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(86)))), ((int)(((byte)(163)))));
+            this.buttonUpdateConsult.FlatAppearance.BorderSize = 0;
+            this.buttonUpdateConsult.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonUpdateConsult.ForeColor = System.Drawing.Color.White;
+            this.buttonUpdateConsult.IconChar = FontAwesome.Sharp.IconChar.Check;
+            this.buttonUpdateConsult.IconColor = System.Drawing.Color.White;
+            this.buttonUpdateConsult.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.buttonUpdateConsult.IconSize = 15;
+            this.buttonUpdateConsult.Location = new System.Drawing.Point(12, 303);
+            this.buttonUpdateConsult.Name = "buttonUpdateConsult";
+            this.buttonUpdateConsult.Size = new System.Drawing.Size(90, 30);
+            this.buttonUpdateConsult.TabIndex = 47;
+            this.buttonUpdateConsult.Text = "Actualizar";
+            this.buttonUpdateConsult.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonUpdateConsult.UseVisualStyleBackColor = false;
+            this.buttonUpdateConsult.Click += new System.EventHandler(this.buttonUpdateConsult_Click);
             // 
-            // label7
+            // label5
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(12, 11);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(42, 13);
-            this.label7.TabIndex = 37;
-            this.label7.Text = "Doctor";
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(14, 156);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(37, 13);
+            this.label5.TabIndex = 33;
+            this.label5.Text = "Fecha";
             // 
-            // buttonRegisterConsult
+            // textBoxRegister
             // 
-            this.buttonRegisterConsult.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(86)))), ((int)(((byte)(163)))));
-            this.buttonRegisterConsult.FlatAppearance.BorderSize = 0;
-            this.buttonRegisterConsult.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonRegisterConsult.ForeColor = System.Drawing.Color.White;
-            this.buttonRegisterConsult.IconChar = FontAwesome.Sharp.IconChar.Check;
-            this.buttonRegisterConsult.IconColor = System.Drawing.Color.White;
-            this.buttonRegisterConsult.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.buttonRegisterConsult.IconSize = 15;
-            this.buttonRegisterConsult.Location = new System.Drawing.Point(12, 303);
-            this.buttonRegisterConsult.Name = "buttonRegisterConsult";
-            this.buttonRegisterConsult.Size = new System.Drawing.Size(90, 30);
-            this.buttonRegisterConsult.TabIndex = 47;
-            this.buttonRegisterConsult.Text = "Actualizar";
-            this.buttonRegisterConsult.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonRegisterConsult.UseVisualStyleBackColor = false;
+            this.textBoxRegister.Location = new System.Drawing.Point(17, 186);
+            this.textBoxRegister.Name = "textBoxRegister";
+            this.textBoxRegister.Size = new System.Drawing.Size(200, 20);
+            this.textBoxRegister.TabIndex = 34;
             // 
             // EditConsult
             // 
@@ -243,7 +233,8 @@ namespace ProyectTopicosAvanzados.Views
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -251,21 +242,19 @@ namespace ProyectTopicosAvanzados.Views
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox1;
-        private FontAwesome.Sharp.IconButton searchPatientButton;
+        private System.Windows.Forms.TextBox textBoxID;
+        private FontAwesome.Sharp.IconButton buttonSearchConsult;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox3;
+        private FontAwesome.Sharp.IconButton buttonUpdateConsult;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.TextBox textBoxSymptom;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBoxPatient;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.Label label7;
-        private FontAwesome.Sharp.IconButton buttonRegisterConsult;
+        private FontAwesome.Sharp.IconButton buttonDeleteConsult;
+        private System.Windows.Forms.DateTimePicker textBoxRegister;
+        private System.Windows.Forms.Label label5;
     }
 }

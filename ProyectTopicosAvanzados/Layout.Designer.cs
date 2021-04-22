@@ -53,23 +53,24 @@ namespace ProyectTopicosAvanzados
             this.buttonAllConsults = new System.Windows.Forms.Button();
             this.buttonConsults = new FontAwesome.Sharp.IconButton();
             this.panelHeader = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.buttonClose = new FontAwesome.Sharp.IconButton();
             this.panelChildForm = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.buttonHistory = new FontAwesome.Sharp.IconButton();
             this.registerTreatment = new FontAwesome.Sharp.IconButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.editTreatment = new FontAwesome.Sharp.IconButton();
             this.mainPanel.SuspendLayout();
             this.panelUnity.SuspendLayout();
             this.panelDoctors.SuspendLayout();
             this.panelPatients.SuspendLayout();
             this.panelConsults.SuspendLayout();
             this.panelHeader.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelChildForm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // homeButton
@@ -141,6 +142,7 @@ namespace ProyectTopicosAvanzados
             this.button6.Text = "Editar unidad";
             this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click_1);
             // 
             // buttonRegisterUnity
             // 
@@ -477,6 +479,17 @@ namespace ProyectTopicosAvanzados
             this.panelHeader.TabIndex = 1;
             this.panelHeader.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelHeader_MouseDown);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(66, 59);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
             // buttonClose
             // 
             this.buttonClose.Dock = System.Windows.Forms.DockStyle.Right;
@@ -518,6 +531,7 @@ namespace ProyectTopicosAvanzados
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(57)))), ((int)(((byte)(144)))));
+            this.panel1.Controls.Add(this.editTreatment);
             this.panel1.Controls.Add(this.buttonHistory);
             this.panel1.Controls.Add(this.registerTreatment);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -564,16 +578,24 @@ namespace ProyectTopicosAvanzados
             this.registerTreatment.UseVisualStyleBackColor = false;
             this.registerTreatment.Click += new System.EventHandler(this.registerTreatment_Click);
             // 
-            // pictureBox1
+            // editTreatment
             // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(66, 59);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.editTreatment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(86)))), ((int)(((byte)(163)))));
+            this.editTreatment.FlatAppearance.BorderSize = 0;
+            this.editTreatment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.editTreatment.ForeColor = System.Drawing.Color.White;
+            this.editTreatment.IconChar = FontAwesome.Sharp.IconChar.History;
+            this.editTreatment.IconColor = System.Drawing.Color.White;
+            this.editTreatment.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.editTreatment.IconSize = 15;
+            this.editTreatment.Location = new System.Drawing.Point(367, 17);
+            this.editTreatment.Name = "editTreatment";
+            this.editTreatment.Size = new System.Drawing.Size(159, 40);
+            this.editTreatment.TabIndex = 40;
+            this.editTreatment.Text = "Editar tratamiento";
+            this.editTreatment.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.editTreatment.UseVisualStyleBackColor = false;
+            this.editTreatment.Click += new System.EventHandler(this.editTreatment_Click);
             // 
             // Layout
             // 
@@ -595,10 +617,10 @@ namespace ProyectTopicosAvanzados
             this.panelPatients.ResumeLayout(false);
             this.panelConsults.ResumeLayout(false);
             this.panelHeader.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelChildForm.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -634,6 +656,7 @@ namespace ProyectTopicosAvanzados
         private FontAwesome.Sharp.IconButton registerTreatment;
         private FontAwesome.Sharp.IconButton buttonHistory;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private FontAwesome.Sharp.IconButton editTreatment;
     }
 }
 

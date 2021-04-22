@@ -139,6 +139,7 @@ namespace ProyectTopicosAvanzados.Views
             this.buttonDelete.Text = "Eliminar";
             this.buttonDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonDelete.UseVisualStyleBackColor = false;
+            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
             // dateTimePicker1
             // 
@@ -166,6 +167,7 @@ namespace ProyectTopicosAvanzados.Views
             this.buttonRegisterConsult.Text = "Actualizar";
             this.buttonRegisterConsult.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonRegisterConsult.UseVisualStyleBackColor = false;
+            this.buttonRegisterConsult.Click += new System.EventHandler(this.buttonRegisterConsult_Click);
             // 
             // textBoxAge
             // 

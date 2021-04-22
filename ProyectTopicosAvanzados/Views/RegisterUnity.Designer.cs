@@ -108,7 +108,7 @@ namespace ProyectTopicosAvanzados.Views
             this.buttonRegisterConsult.Name = "buttonRegisterConsult";
             this.buttonRegisterConsult.Size = new System.Drawing.Size(90, 30);
             this.buttonRegisterConsult.TabIndex = 44;
-            this.buttonRegisterConsult.Text = "Actualizar";
+            this.buttonRegisterConsult.Text = "Registrar";
             this.buttonRegisterConsult.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonRegisterConsult.UseVisualStyleBackColor = false;
             this.buttonRegisterConsult.Click += new System.EventHandler(this.buttonRegisterConsult_Click);
@@ -147,14 +147,14 @@ namespace ProyectTopicosAvanzados.Views
             this.label2.TabIndex = 40;
             this.label2.Text = "Nombre";
             // 
-            // Unity
+            // RegisterUnity
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(809, 515);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
-            this.Name = "Unity";
+            this.Name = "RegisterUnity";
             this.Text = "Unity";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
