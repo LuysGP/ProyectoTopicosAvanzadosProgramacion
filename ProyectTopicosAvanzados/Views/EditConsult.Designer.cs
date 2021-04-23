@@ -30,6 +30,7 @@ namespace ProyectTopicosAvanzados.Views
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.textBoxID = new System.Windows.Forms.ComboBox();
             this.buttonSearchConsult = new FontAwesome.Sharp.IconButton();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -40,10 +41,9 @@ namespace ProyectTopicosAvanzados.Views
             this.label5 = new System.Windows.Forms.Label();
             this.textBoxSymptom = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBoxPatient = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.buttonUpdateConsult = new FontAwesome.Sharp.IconButton();
-            this.textBoxID = new System.Windows.Forms.ComboBox();
+            this.textBoxPatient = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -60,6 +60,14 @@ namespace ProyectTopicosAvanzados.Views
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 144);
             this.panel1.TabIndex = 0;
+            // 
+            // textBoxID
+            // 
+            this.textBoxID.FormattingEnabled = true;
+            this.textBoxID.Location = new System.Drawing.Point(12, 77);
+            this.textBoxID.Name = "textBoxID";
+            this.textBoxID.Size = new System.Drawing.Size(121, 21);
+            this.textBoxID.TabIndex = 25;
             // 
             // buttonSearchConsult
             // 
@@ -132,11 +140,11 @@ namespace ProyectTopicosAvanzados.Views
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.textBoxPatient);
             this.panel3.Controls.Add(this.textBoxRegister);
             this.panel3.Controls.Add(this.label5);
             this.panel3.Controls.Add(this.textBoxSymptom);
             this.panel3.Controls.Add(this.label4);
-            this.panel3.Controls.Add(this.textBoxPatient);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
@@ -178,13 +186,6 @@ namespace ProyectTopicosAvanzados.Views
             this.label4.TabIndex = 31;
             this.label4.Text = "Sintomas";
             // 
-            // textBoxPatient
-            // 
-            this.textBoxPatient.Location = new System.Drawing.Point(17, 32);
-            this.textBoxPatient.Name = "textBoxPatient";
-            this.textBoxPatient.Size = new System.Drawing.Size(183, 20);
-            this.textBoxPatient.TabIndex = 30;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -214,13 +215,13 @@ namespace ProyectTopicosAvanzados.Views
             this.buttonUpdateConsult.UseVisualStyleBackColor = false;
             this.buttonUpdateConsult.Click += new System.EventHandler(this.buttonUpdateConsult_Click);
             // 
-            // textBoxID
+            // textBoxPatient
             // 
-            this.textBoxID.FormattingEnabled = true;
-            this.textBoxID.Location = new System.Drawing.Point(12, 77);
-            this.textBoxID.Name = "textBoxID";
-            this.textBoxID.Size = new System.Drawing.Size(121, 21);
-            this.textBoxID.TabIndex = 25;
+            this.textBoxPatient.FormattingEnabled = true;
+            this.textBoxPatient.Location = new System.Drawing.Point(12, 31);
+            this.textBoxPatient.Name = "textBoxPatient";
+            this.textBoxPatient.Size = new System.Drawing.Size(121, 21);
+            this.textBoxPatient.TabIndex = 35;
             // 
             // EditConsult
             // 
@@ -251,11 +252,11 @@ namespace ProyectTopicosAvanzados.Views
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox textBoxSymptom;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBoxPatient;
         private System.Windows.Forms.Label label3;
         private FontAwesome.Sharp.IconButton buttonDeleteConsult;
         private System.Windows.Forms.DateTimePicker textBoxRegister;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox textBoxID;
+        private System.Windows.Forms.ComboBox textBoxPatient;
     }
 }

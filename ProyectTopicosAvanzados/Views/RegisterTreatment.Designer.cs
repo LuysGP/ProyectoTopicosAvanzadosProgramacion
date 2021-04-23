@@ -32,18 +32,18 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.buttonRegisterConsult = new FontAwesome.Sharp.IconButton();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.textBoxDoctor = new System.Windows.Forms.ComboBox();
             this.textBoxDiary = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.textBoxNurse = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBoxConsult = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.textBoxTracing = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBoxDoc = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.textBoxConsult = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -91,21 +91,29 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.textBoxConsult);
+            this.panel3.Controls.Add(this.textBoxDoctor);
             this.panel3.Controls.Add(this.textBoxDiary);
             this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.textBoxNurse);
             this.panel3.Controls.Add(this.label3);
-            this.panel3.Controls.Add(this.textBoxConsult);
             this.panel3.Controls.Add(this.label7);
             this.panel3.Controls.Add(this.textBoxTracing);
             this.panel3.Controls.Add(this.label5);
-            this.panel3.Controls.Add(this.textBoxDoc);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 61);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(800, 305);
             this.panel3.TabIndex = 34;
+            // 
+            // textBoxDoctor
+            // 
+            this.textBoxDoctor.FormattingEnabled = true;
+            this.textBoxDoctor.Location = new System.Drawing.Point(17, 39);
+            this.textBoxDoctor.Name = "textBoxDoctor";
+            this.textBoxDoctor.Size = new System.Drawing.Size(121, 21);
+            this.textBoxDoctor.TabIndex = 52;
             // 
             // textBoxDiary
             // 
@@ -142,13 +150,6 @@
             this.label3.TabIndex = 41;
             this.label3.Text = "Enfermera";
             // 
-            // textBoxConsult
-            // 
-            this.textBoxConsult.Location = new System.Drawing.Point(20, 180);
-            this.textBoxConsult.Name = "textBoxConsult";
-            this.textBoxConsult.Size = new System.Drawing.Size(183, 20);
-            this.textBoxConsult.TabIndex = 40;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -176,13 +177,6 @@
             this.label5.Size = new System.Drawing.Size(72, 13);
             this.label5.TabIndex = 33;
             this.label5.Text = "Seguimiento";
-            // 
-            // textBoxDoc
-            // 
-            this.textBoxDoc.Location = new System.Drawing.Point(20, 39);
-            this.textBoxDoc.Name = "textBoxDoc";
-            this.textBoxDoc.Size = new System.Drawing.Size(183, 20);
-            this.textBoxDoc.TabIndex = 28;
             // 
             // label2
             // 
@@ -213,6 +207,14 @@
             this.label1.TabIndex = 15;
             this.label1.Text = "Registrar tratamiento";
             // 
+            // textBoxConsult
+            // 
+            this.textBoxConsult.FormattingEnabled = true;
+            this.textBoxConsult.Location = new System.Drawing.Point(20, 180);
+            this.textBoxConsult.Name = "textBoxConsult";
+            this.textBoxConsult.Size = new System.Drawing.Size(121, 21);
+            this.textBoxConsult.TabIndex = 53;
+            // 
             // RegisterTreatment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -241,13 +243,13 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBoxNurse;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBoxConsult;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBoxTracing;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBoxDoc;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox textBoxDoctor;
+        private System.Windows.Forms.ComboBox textBoxConsult;
     }
 }

@@ -30,7 +30,6 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.buttonDeleteUnity = new FontAwesome.Sharp.IconButton();
-            this.textBoxDoctorId = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.buttonUpdateUnit = new FontAwesome.Sharp.IconButton();
             this.textBoxPlant = new System.Windows.Forms.TextBox();
@@ -38,18 +37,19 @@
             this.textBoxName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.textBoxUnity = new System.Windows.Forms.ComboBox();
             this.buttonSearchUnity = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBoxUnity = new System.Windows.Forms.ComboBox();
+            this.textBoxDoctorId = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.buttonDeleteUnity);
             this.panel1.Controls.Add(this.textBoxDoctorId);
+            this.panel1.Controls.Add(this.buttonDeleteUnity);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.buttonUpdateUnit);
             this.panel1.Controls.Add(this.textBoxPlant);
@@ -80,13 +80,6 @@
             this.buttonDeleteUnity.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonDeleteUnity.UseVisualStyleBackColor = false;
             this.buttonDeleteUnity.Click += new System.EventHandler(this.buttonDeleteUnity_Click);
-            // 
-            // textBoxDoctorId
-            // 
-            this.textBoxDoctorId.Location = new System.Drawing.Point(12, 167);
-            this.textBoxDoctorId.Name = "textBoxDoctorId";
-            this.textBoxDoctorId.Size = new System.Drawing.Size(183, 20);
-            this.textBoxDoctorId.TabIndex = 46;
             // 
             // label4
             // 
@@ -163,6 +156,14 @@
             this.panel2.Size = new System.Drawing.Size(800, 149);
             this.panel2.TabIndex = 33;
             // 
+            // textBoxUnity
+            // 
+            this.textBoxUnity.FormattingEnabled = true;
+            this.textBoxUnity.Location = new System.Drawing.Point(12, 79);
+            this.textBoxUnity.Name = "textBoxUnity";
+            this.textBoxUnity.Size = new System.Drawing.Size(121, 21);
+            this.textBoxUnity.TabIndex = 50;
+            // 
             // buttonSearchUnity
             // 
             this.buttonSearchUnity.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(86)))), ((int)(((byte)(163)))));
@@ -202,13 +203,13 @@
             this.label5.TabIndex = 47;
             this.label5.Text = "Buscar unidad";
             // 
-            // textBoxUnity
+            // textBoxDoctorId
             // 
-            this.textBoxUnity.FormattingEnabled = true;
-            this.textBoxUnity.Location = new System.Drawing.Point(12, 79);
-            this.textBoxUnity.Name = "textBoxUnity";
-            this.textBoxUnity.Size = new System.Drawing.Size(121, 21);
-            this.textBoxUnity.TabIndex = 50;
+            this.textBoxDoctorId.FormattingEnabled = true;
+            this.textBoxDoctorId.Location = new System.Drawing.Point(12, 168);
+            this.textBoxDoctorId.Name = "textBoxDoctorId";
+            this.textBoxDoctorId.Size = new System.Drawing.Size(121, 21);
+            this.textBoxDoctorId.TabIndex = 48;
             // 
             // EditUnity
             // 
@@ -230,7 +231,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBoxDoctorId;
         private System.Windows.Forms.Label label4;
         private FontAwesome.Sharp.IconButton buttonUpdateUnit;
         private System.Windows.Forms.TextBox textBoxPlant;
@@ -243,5 +243,6 @@
         private System.Windows.Forms.Label label5;
         private FontAwesome.Sharp.IconButton buttonDeleteUnity;
         private System.Windows.Forms.ComboBox textBoxUnity;
+        private System.Windows.Forms.ComboBox textBoxDoctorId;
     }
 }

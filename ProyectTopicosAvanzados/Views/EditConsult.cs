@@ -15,13 +15,18 @@ namespace ProyectTopicosAvanzados.Views
     {
         SqlConnection cnt = new SqlConnection(@"Data Source=DESKTOP-VKEH4OM;Initial Catalog = Clinica; integrated security=true");
         ConsultDetail consult = new ConsultDetail();
+        EditPatient editPatient = new EditPatient();
+
         public int consultActual;
         public EditConsult()
         {
             InitializeComponent();
-            SelectAllConsults();
+            editPatient.SelectAllPatients(textBoxPatient);
+            SelectAllConsults(textBoxID);
+            buttonUpdateConsult.Enabled = false;
+            buttonDeleteConsult.Enabled = false;
         }
-        private void SelectAllConsults()
+        public void SelectAllConsults(ComboBox textBox)
         {
             try
             {
@@ -40,7 +45,7 @@ namespace ProyectTopicosAvanzados.Views
                 }
                 while (sqlDataReader.Read())
                 {
-                    textBoxID.Items.Add(sqlDataReader[0]);
+                    textBox.Items.Add(sqlDataReader[0]);
                 }
                 cnt.Close();
             }
@@ -90,11 +95,14 @@ namespace ProyectTopicosAvanzados.Views
                 MessageBox.Show("Consulta eliminada correctamente");
 
                 cnt.Close();
+
+                textBoxSymptom.Clear();                
             }
             catch (Exception err)
             {
                 MessageBox.Show(err.Message);
             }
+
         }
 
         private void buttonSearchConsult_Click(object sender, EventArgs e)
@@ -131,10 +139,10 @@ namespace ProyectTopicosAvanzados.Views
                         consult.SS_number = int.Parse(sqlDataReader[2].ToString());
                         textBoxPatient.Text = consult.SS_number.ToString();
                     }
+                    consultActual = int.Parse(textBoxID.Text);
 
                     buttonUpdateConsult.Enabled = true;
-                    buttonUpdateConsult.Enabled = true;
-                    consultActual = int.Parse(textBoxID.Text);
+                    buttonDeleteConsult.Enabled = true;
 
                 }
                 cnt.Close();

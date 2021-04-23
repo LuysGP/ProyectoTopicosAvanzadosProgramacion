@@ -14,9 +14,13 @@ namespace ProyectTopicosAvanzados.Views
     public partial class RegisterConsult : Form
     {
         ConsultDetails ConsultDetails;
+        EditPatient editPatient = new EditPatient();
+
         public RegisterConsult()
         {
+
             InitializeComponent();
+            editPatient.SelectAllPatients(textBoxPatient);
         }
 
         private void buttonRegisterConsult_Click(object sender, EventArgs e)

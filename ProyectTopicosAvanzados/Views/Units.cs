@@ -26,7 +26,7 @@ namespace ProyectTopicosAvanzados.Views
             {
                 conection.Open();
 
-                String query = "SELECT * FROM Unity";
+                String query = "SELECT unity_id AS ID, unity_name AS Nombre, unity_plant AS Planta#, doctor_id AS IDDoctor FROM Unity";
                 SqlCommand command = new SqlCommand(query, conection);
                 SqlDataAdapter adapter = new SqlDataAdapter(command);
                 adapter.Fill(dataTable);

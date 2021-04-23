@@ -13,9 +13,11 @@ namespace ProyectTopicosAvanzados.Views
 {
     public partial class RegisterUnity : Form
     {
+        EditDoctor editConsult = new EditDoctor();
         public RegisterUnity()
         {
             InitializeComponent();
+            editConsult.SelectAllDoctors(textBoxDoctorId);
         }
 
         private void buttonRegisterConsult_Click(object sender, EventArgs e)

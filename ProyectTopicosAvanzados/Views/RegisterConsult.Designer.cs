@@ -35,10 +35,10 @@ namespace ProyectTopicosAvanzados.Views
             this.panel3 = new System.Windows.Forms.Panel();
             this.textBoxSymptom = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBoxPatient = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.textBoxPatient = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -86,9 +86,9 @@ namespace ProyectTopicosAvanzados.Views
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.textBoxPatient);
             this.panel3.Controls.Add(this.textBoxSymptom);
             this.panel3.Controls.Add(this.label4);
-            this.panel3.Controls.Add(this.textBoxPatient);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 61);
@@ -112,13 +112,6 @@ namespace ProyectTopicosAvanzados.Views
             this.label4.Size = new System.Drawing.Size(54, 13);
             this.label4.TabIndex = 31;
             this.label4.Text = "Sintomas";
-            // 
-            // textBoxPatient
-            // 
-            this.textBoxPatient.Location = new System.Drawing.Point(17, 32);
-            this.textBoxPatient.Name = "textBoxPatient";
-            this.textBoxPatient.Size = new System.Drawing.Size(183, 20);
-            this.textBoxPatient.TabIndex = 30;
             // 
             // label3
             // 
@@ -149,6 +142,14 @@ namespace ProyectTopicosAvanzados.Views
             this.label1.TabIndex = 15;
             this.label1.Text = "Registrar consulta";
             // 
+            // textBoxPatient
+            // 
+            this.textBoxPatient.FormattingEnabled = true;
+            this.textBoxPatient.Location = new System.Drawing.Point(17, 32);
+            this.textBoxPatient.Name = "textBoxPatient";
+            this.textBoxPatient.Size = new System.Drawing.Size(121, 21);
+            this.textBoxPatient.TabIndex = 36;
+            // 
             // RegisterConsult
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -172,12 +173,12 @@ namespace ProyectTopicosAvanzados.Views
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel3;
         private FontAwesome.Sharp.IconButton buttonRegisterConsult;
-        private System.Windows.Forms.TextBox textBoxPatient;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.TextBox textBoxSymptom;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox textBoxPatient;
     }
 }

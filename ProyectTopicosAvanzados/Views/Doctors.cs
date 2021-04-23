@@ -26,7 +26,7 @@ namespace ProyectTopicosAvanzados.Views
             try
             {
                 conection.Open();
-                String query = "SELECT * FROM Doctor";
+                String query = "SELECT doctor_id AS ID, doctor_speciality AS Especialidad, doctor_name AS Nombre FROM Doctor";
                 SqlCommand command = new SqlCommand(query, conection);
                 SqlDataAdapter adapter = new SqlDataAdapter(command);
                 adapter.Fill(dataTable);

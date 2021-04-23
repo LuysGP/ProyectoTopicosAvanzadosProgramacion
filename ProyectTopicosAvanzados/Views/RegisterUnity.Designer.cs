@@ -32,13 +32,13 @@ namespace ProyectTopicosAvanzados.Views
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBoxDoctorId = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.buttonRegisterConsult = new FontAwesome.Sharp.IconButton();
             this.textBoxPlant = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textBoxName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.textBoxDoctorId = new System.Windows.Forms.ComboBox();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -76,13 +76,6 @@ namespace ProyectTopicosAvanzados.Views
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(809, 454);
             this.panel1.TabIndex = 32;
-            // 
-            // textBoxDoctorId
-            // 
-            this.textBoxDoctorId.Location = new System.Drawing.Point(12, 167);
-            this.textBoxDoctorId.Name = "textBoxDoctorId";
-            this.textBoxDoctorId.Size = new System.Drawing.Size(183, 20);
-            this.textBoxDoctorId.TabIndex = 46;
             // 
             // label4
             // 
@@ -147,6 +140,14 @@ namespace ProyectTopicosAvanzados.Views
             this.label2.TabIndex = 40;
             this.label2.Text = "Nombre";
             // 
+            // textBoxDoctorId
+            // 
+            this.textBoxDoctorId.FormattingEnabled = true;
+            this.textBoxDoctorId.Location = new System.Drawing.Point(12, 157);
+            this.textBoxDoctorId.Name = "textBoxDoctorId";
+            this.textBoxDoctorId.Size = new System.Drawing.Size(121, 21);
+            this.textBoxDoctorId.TabIndex = 49;
+            // 
             // RegisterUnity
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -169,12 +170,12 @@ namespace ProyectTopicosAvanzados.Views
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBoxDoctorId;
         private System.Windows.Forms.Label label4;
         private FontAwesome.Sharp.IconButton buttonRegisterConsult;
         private System.Windows.Forms.TextBox textBoxPlant;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBoxName;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox textBoxDoctorId;
     }
 }

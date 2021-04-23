@@ -35,6 +35,7 @@ namespace ProyectTopicosAvanzados.Views
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
             this.buttonDelete = new FontAwesome.Sharp.IconButton();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.buttonRegisterConsult = new FontAwesome.Sharp.IconButton();
@@ -43,8 +44,7 @@ namespace ProyectTopicosAvanzados.Views
             this.label3 = new System.Windows.Forms.Label();
             this.textBoxName = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBoxUnity = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.textBoxUnity = new System.Windows.Forms.ComboBox();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -125,6 +125,16 @@ namespace ProyectTopicosAvanzados.Views
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 294);
             this.panel1.TabIndex = 16;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(253, 11);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(45, 13);
+            this.label6.TabIndex = 50;
+            this.label6.Text = "Unidad";
             // 
             // buttonDelete
             // 
@@ -220,20 +230,11 @@ namespace ProyectTopicosAvanzados.Views
             // 
             // textBoxUnity
             // 
+            this.textBoxUnity.FormattingEnabled = true;
             this.textBoxUnity.Location = new System.Drawing.Point(256, 37);
             this.textBoxUnity.Name = "textBoxUnity";
-            this.textBoxUnity.Size = new System.Drawing.Size(183, 20);
-            this.textBoxUnity.TabIndex = 51;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(253, 11);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(45, 13);
-            this.label6.TabIndex = 50;
-            this.label6.Text = "Unidad";
+            this.textBoxUnity.Size = new System.Drawing.Size(121, 21);
+            this.textBoxUnity.TabIndex = 52;
             // 
             // EditPatient
             // 
@@ -268,7 +269,7 @@ namespace ProyectTopicosAvanzados.Views
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private FontAwesome.Sharp.IconButton buttonDelete;
         private System.Windows.Forms.ComboBox textBoxSS;
-        private System.Windows.Forms.TextBox textBoxUnity;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox textBoxUnity;
     }
 }

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.buttonDeleteTreatment = new FontAwesome.Sharp.IconButton();
             this.buttonUpdateTreatment = new FontAwesome.Sharp.IconButton();
             this.textBoxDiary = new System.Windows.Forms.TextBox();
@@ -37,15 +38,14 @@
             this.label5 = new System.Windows.Forms.Label();
             this.textBoxNurse = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBoxDoctor = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.textBoxID = new System.Windows.Forms.ComboBox();
             this.buttonSearchTreatment = new FontAwesome.Sharp.IconButton();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBoxConsult = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.textBoxDoctor = new System.Windows.Forms.ComboBox();
+            this.textBoxConsult = new System.Windows.Forms.ComboBox();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -53,6 +53,7 @@
             // panel2
             // 
             this.panel2.Controls.Add(this.textBoxConsult);
+            this.panel2.Controls.Add(this.textBoxDoctor);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.buttonDeleteTreatment);
             this.panel2.Controls.Add(this.buttonUpdateTreatment);
@@ -62,13 +63,22 @@
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.textBoxNurse);
             this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.textBoxDoctor);
             this.panel2.Controls.Add(this.label7);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 144);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(800, 392);
             this.panel2.TabIndex = 3;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(12, 148);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(53, 13);
+            this.label3.TabIndex = 49;
+            this.label3.Text = "Consulta";
             // 
             // buttonDeleteTreatment
             // 
@@ -161,13 +171,6 @@
             this.label4.TabIndex = 41;
             this.label4.Text = "Enfermera";
             // 
-            // textBoxDoctor
-            // 
-            this.textBoxDoctor.Location = new System.Drawing.Point(15, 37);
-            this.textBoxDoctor.Name = "textBoxDoctor";
-            this.textBoxDoctor.Size = new System.Drawing.Size(183, 20);
-            this.textBoxDoctor.TabIndex = 38;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -237,22 +240,21 @@
             this.label1.TabIndex = 22;
             this.label1.Text = "Editar tratamiento";
             // 
+            // textBoxDoctor
+            // 
+            this.textBoxDoctor.FormattingEnabled = true;
+            this.textBoxDoctor.Location = new System.Drawing.Point(15, 37);
+            this.textBoxDoctor.Name = "textBoxDoctor";
+            this.textBoxDoctor.Size = new System.Drawing.Size(121, 21);
+            this.textBoxDoctor.TabIndex = 51;
+            // 
             // textBoxConsult
             // 
-            this.textBoxConsult.Location = new System.Drawing.Point(12, 174);
+            this.textBoxConsult.FormattingEnabled = true;
+            this.textBoxConsult.Location = new System.Drawing.Point(15, 174);
             this.textBoxConsult.Name = "textBoxConsult";
-            this.textBoxConsult.Size = new System.Drawing.Size(183, 20);
-            this.textBoxConsult.TabIndex = 50;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(9, 148);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(53, 13);
-            this.label3.TabIndex = 49;
-            this.label3.Text = "Consulta";
+            this.textBoxConsult.Size = new System.Drawing.Size(121, 21);
+            this.textBoxConsult.TabIndex = 52;
             // 
             // EditTreatment
             // 
@@ -281,7 +283,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBoxNurse;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBoxDoctor;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel1;
         private FontAwesome.Sharp.IconButton buttonSearchTreatment;
@@ -289,7 +290,8 @@
         private System.Windows.Forms.Label label1;
         private FontAwesome.Sharp.IconButton buttonDeleteTreatment;
         private System.Windows.Forms.ComboBox textBoxID;
-        private System.Windows.Forms.TextBox textBoxConsult;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox textBoxConsult;
+        private System.Windows.Forms.ComboBox textBoxDoctor;
     }
 }

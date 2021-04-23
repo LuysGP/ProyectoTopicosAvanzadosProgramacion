@@ -33,10 +33,7 @@ namespace ProyectTopicosAvanzados.Views
             this.panel3 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.searchPatientButton = new FontAwesome.Sharp.IconButton();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -58,7 +55,7 @@ namespace ProyectTopicosAvanzados.Views
             this.panel3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel3.Controls.Add(this.dataGridView1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 157);
+            this.panel3.Location = new System.Drawing.Point(0, 64);
             this.panel3.Name = "panel3";
             this.panel3.Padding = new System.Windows.Forms.Padding(15);
             this.panel3.Size = new System.Drawing.Size(800, 340);
@@ -76,43 +73,12 @@ namespace ProyectTopicosAvanzados.Views
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.dateTimePicker1);
-            this.panel2.Controls.Add(this.searchPatientButton);
-            this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(800, 157);
+            this.panel2.Size = new System.Drawing.Size(800, 64);
             this.panel2.TabIndex = 14;
-            // 
-            // searchPatientButton
-            // 
-            this.searchPatientButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(86)))), ((int)(((byte)(163)))));
-            this.searchPatientButton.FlatAppearance.BorderSize = 0;
-            this.searchPatientButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.searchPatientButton.ForeColor = System.Drawing.Color.White;
-            this.searchPatientButton.IconChar = FontAwesome.Sharp.IconChar.Search;
-            this.searchPatientButton.IconColor = System.Drawing.Color.White;
-            this.searchPatientButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.searchPatientButton.IconSize = 15;
-            this.searchPatientButton.Location = new System.Drawing.Point(12, 103);
-            this.searchPatientButton.Name = "searchPatientButton";
-            this.searchPatientButton.Size = new System.Drawing.Size(90, 30);
-            this.searchPatientButton.TabIndex = 16;
-            this.searchPatientButton.Text = "Buscar";
-            this.searchPatientButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.searchPatientButton.UseVisualStyleBackColor = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(9, 51);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(92, 13);
-            this.label2.TabIndex = 14;
-            this.label2.Text = "Buscar consultas";
             // 
             // label1
             // 
@@ -123,13 +89,6 @@ namespace ProyectTopicosAvanzados.Views
             this.label1.Size = new System.Drawing.Size(103, 30);
             this.label1.TabIndex = 13;
             this.label1.Text = "Consultas";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(12, 77);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 17;
             // 
             // Consults
             // 
@@ -154,9 +113,6 @@ namespace ProyectTopicosAvanzados.Views
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel2;
-        private FontAwesome.Sharp.IconButton searchPatientButton;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }

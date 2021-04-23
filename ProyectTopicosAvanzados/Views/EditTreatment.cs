@@ -15,12 +15,18 @@ namespace ProyectTopicosAvanzados.Views
     {
         SqlConnection conection = new SqlConnection(@"Data Source=DESKTOP-VKEH4OM;Initial Catalog = Clinica; integrated security=true");
         EditTreatmentDetails editTreatmentDetails = new EditTreatmentDetails();
+        EditDoctor editDoctor = new EditDoctor();
+        EditConsult editConsult = new EditConsult();
 
         int actualTreatment;
         public EditTreatment()
         {
             InitializeComponent();
+            editDoctor.SelectAllDoctors(textBoxDoctor);
+            editConsult.SelectAllConsults(textBoxConsult);
             SelectAllTreatments();
+            buttonDeleteTreatment.Enabled = false;
+            buttonUpdateTreatment.Enabled = false;
         }
         private void SelectAllTreatments()
         {
@@ -89,6 +95,9 @@ namespace ProyectTopicosAvanzados.Views
                     actualTreatment = int.Parse(textBoxID.Text);
                 }
                 conection.Close();
+
+                buttonUpdateTreatment.Enabled = true;
+                buttonDeleteTreatment.Enabled = true;
             }
             catch (Exception err)
             {
@@ -110,6 +119,11 @@ namespace ProyectTopicosAvanzados.Views
                 MessageBox.Show("Tratamiento eliminado correctamente");
 
                 conection.Close();
+
+                textBoxDoctor.Text = "";
+                textBoxTracing.Clear();
+                textBoxNurse.Clear();
+                textBoxDiary.Clear();
             }
             catch (Exception err)
             {

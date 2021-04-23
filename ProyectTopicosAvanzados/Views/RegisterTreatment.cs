@@ -14,17 +14,21 @@ namespace ProyectTopicosAvanzados.Views
     public partial class RegisterTreatment : Form
     {
         TreatmentDetails TreatmentDetails;
+        EditDoctor editDoctor = new EditDoctor();
+        EditConsult editConsult = new EditConsult();
+
         public RegisterTreatment()
         {
             InitializeComponent();
-
+            editDoctor.SelectAllDoctors(textBoxDoctor);
+            editConsult.SelectAllConsults(textBoxConsult);
         }
 
         private void buttonRegisterConsult_Click(object sender, EventArgs e)
         {
             try
             {
-                TreatmentDetails = new TreatmentDetails(int.Parse(textBoxDoc.Text), textBoxNurse.Text, textBoxTracing.Text, textBoxDiary.Text, int.Parse(textBoxConsult.Text));
+                TreatmentDetails = new TreatmentDetails(int.Parse(textBoxDoctor.Text), textBoxNurse.Text, textBoxTracing.Text, textBoxDiary.Text, int.Parse(textBoxConsult.Text));
 
                 TreatmentDetails.Register();
 

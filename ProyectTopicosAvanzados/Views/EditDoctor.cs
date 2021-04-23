@@ -20,9 +20,11 @@ namespace ProyectTopicosAvanzados.Views
         public EditDoctor()
         {
             InitializeComponent();
-            SelectAllDoctors();
+            SelectAllDoctors(textBoxDoctor);
+            buttonDeleteDoctor.Enabled = false;
+            buttonUpdateDoctor.Enabled = false;
         }
-        private void SelectAllDoctors()
+        public void SelectAllDoctors(ComboBox textBox)
         {
             try
             {
@@ -41,7 +43,7 @@ namespace ProyectTopicosAvanzados.Views
                 }
                 while (sqlDataReader.Read())
                 {
-                    textBoxDoctor.Items.Add(sqlDataReader[0]);
+                    textBox.Items.Add(sqlDataReader[0]);
                 }
                 cnt.Close();
 
@@ -78,7 +80,7 @@ namespace ProyectTopicosAvanzados.Views
                     textBoxName.Text = doctor.nombre;
 
                     buttonUpdateDoctor.Enabled = true;
-                    doctorActual = int.Parse(textBoxDoctor.Text);
+                    buttonDeleteDoctor.Enabled = true;                    doctorActual = int.Parse(textBoxDoctor.Text);
                 }
                 cnt.Close();
             }
@@ -106,6 +108,8 @@ namespace ProyectTopicosAvanzados.Views
                 cnt.Close();
 
                 MessageBox.Show("Doctor actualizado correctamente");
+
+                
             }
             catch (Exception err)
             {
@@ -126,6 +130,9 @@ namespace ProyectTopicosAvanzados.Views
                 MessageBox.Show("Doctor eliminado correctamente");
 
                 cnt.Close();
+
+                textBoxEspeciality.Clear();
+                textBoxName.Clear();
             }
             catch (Exception err)
             {

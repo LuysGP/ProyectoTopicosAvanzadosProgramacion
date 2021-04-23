@@ -32,6 +32,7 @@ namespace ProyectTopicosAvanzados.Views
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
             this.buttonRegisterConsult = new FontAwesome.Sharp.IconButton();
             this.textBoxAge = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -39,8 +40,7 @@ namespace ProyectTopicosAvanzados.Views
             this.label3 = new System.Windows.Forms.Label();
             this.textBoxName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1Unity = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.textBoxUnity = new System.Windows.Forms.ComboBox();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -66,7 +66,7 @@ namespace ProyectTopicosAvanzados.Views
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.textBox1Unity);
+            this.panel1.Controls.Add(this.textBoxUnity);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.buttonRegisterConsult);
             this.panel1.Controls.Add(this.textBoxAge);
@@ -80,6 +80,16 @@ namespace ProyectTopicosAvanzados.Views
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 387);
             this.panel1.TabIndex = 29;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(14, 224);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(104, 13);
+            this.label5.TabIndex = 40;
+            this.label5.Text = "Número de unidad";
             // 
             // buttonRegisterConsult
             // 
@@ -151,22 +161,13 @@ namespace ProyectTopicosAvanzados.Views
             this.label2.TabIndex = 33;
             this.label2.Text = "Nombre";
             // 
-            // textBox1Unity
+            // textBoxUnity
             // 
-            this.textBox1Unity.Location = new System.Drawing.Point(17, 250);
-            this.textBox1Unity.Name = "textBox1Unity";
-            this.textBox1Unity.Size = new System.Drawing.Size(183, 20);
-            this.textBox1Unity.TabIndex = 41;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(14, 224);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(104, 13);
-            this.label5.TabIndex = 40;
-            this.label5.Text = "Número de unidad";
+            this.textBoxUnity.FormattingEnabled = true;
+            this.textBoxUnity.Location = new System.Drawing.Point(17, 252);
+            this.textBoxUnity.Name = "textBoxUnity";
+            this.textBoxUnity.Size = new System.Drawing.Size(121, 21);
+            this.textBoxUnity.TabIndex = 53;
             // 
             // RegisterPatient
             // 
@@ -197,7 +198,7 @@ namespace ProyectTopicosAvanzados.Views
         private System.Windows.Forms.TextBox textBoxName;
         private System.Windows.Forms.Label label2;
         private FontAwesome.Sharp.IconButton buttonRegisterConsult;
-        private System.Windows.Forms.TextBox textBox1Unity;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox textBoxUnity;
     }
 }

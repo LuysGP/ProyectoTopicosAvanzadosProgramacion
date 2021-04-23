@@ -13,17 +13,19 @@ namespace ProyectTopicosAvanzados.Views
     public partial class RegisterPatient : Form
     {
         PatientDetails patient;
+        EditUnity editUnity = new EditUnity();
 
         public RegisterPatient()
         {
             InitializeComponent();
+            editUnity.SelectAllUnits(textBoxUnity);
         }
 
         private void buttonRegisterConsult_Click(object sender, EventArgs e)
         {
             try
             {
-                patient = new PatientDetails(int.Parse(textBoxSS.Text), int.Parse(textBoxAge.Text), textBoxName.Text, int.Parse(textBox1Unity.Text));
+                patient = new PatientDetails(int.Parse(textBoxSS.Text), int.Parse(textBoxAge.Text), textBoxName.Text, int.Parse(textBoxUnity.Text));
                 patient.Register();
                 MessageBox.Show("Paciente registrado correctamente");
             }

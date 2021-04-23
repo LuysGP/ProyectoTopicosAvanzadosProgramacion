@@ -26,7 +26,7 @@ namespace ProyectTopicosAvanzados.Views
             try
             {
                 conection.Open();
-                String query = "SELECT * FROM Register";
+                String query = "SELECT register_date AS Fecha_Registro, sympton AS Sintomas, SS_number AS Numero_SS, register_id AS IDRegistro FROM Register";
                 SqlCommand command = new SqlCommand(query, conection);
                 SqlDataAdapter adapter = new SqlDataAdapter(command);
                 adapter.Fill(dataTable);

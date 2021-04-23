@@ -14,16 +14,19 @@ namespace ProyectTopicosAvanzados.Views
     {
         SqlConnection conection = new SqlConnection(@"Data Source=DESKTOP-VKEH4OM;Initial Catalog = Clinica; integrated security=true");
         EditUnityDetails EditUnityDetails = new EditUnityDetails();
-
+        EditDoctor editDoctor = new EditDoctor();
         int actualUnity;
 
         public EditUnity()
         {
             InitializeComponent();
-            SelectAllUnits();
+            editDoctor.SelectAllDoctors(textBoxDoctorId);
+            SelectAllUnits(textBoxUnity);
+            buttonUpdateUnit.Enabled = false;
+            buttonDeleteUnity.Enabled = false;
         }
 
-        private void SelectAllUnits()
+        public void SelectAllUnits(ComboBox textBox)
         {
             try
             {
@@ -42,7 +45,7 @@ namespace ProyectTopicosAvanzados.Views
                 }
                 while (sqlDataReader.Read())
                 {
-                    textBoxUnity.Items.Add(sqlDataReader[0]);
+                    textBox.Items.Add(sqlDataReader[0]);
                 }
                 conection.Close();
             }
