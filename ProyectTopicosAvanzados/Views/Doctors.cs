@@ -12,6 +12,7 @@ namespace ProyectTopicosAvanzados.Views
 {
     public partial class Doctors : Form
     {
+        //Conexion a la base de datos
         SqlConnection conection = new SqlConnection(@"Data Source=DESKTOP-VKEH4OM;Initial Catalog = Clinica; integrated security=true");
         DataTable dataTable = new DataTable();
 
@@ -20,7 +21,7 @@ namespace ProyectTopicosAvanzados.Views
             InitializeComponent();
             SelectAllDoctors();
         }
-
+        //Seleccion de todos los doctores
         private void SelectAllDoctors()
         {
             try
