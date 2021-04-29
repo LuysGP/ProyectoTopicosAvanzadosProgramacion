@@ -26,7 +26,7 @@ namespace ProyectTopicosAvanzados.Views
             buttonDeleteDoctor.Enabled = false;
             buttonUpdateDoctor.Enabled = false;
         }
-        //Seleccion de todos los doctores
+        //Seleccion de todos los doctores.
         public void SelectAllDoctors(ComboBox textBox)
         {
             try
