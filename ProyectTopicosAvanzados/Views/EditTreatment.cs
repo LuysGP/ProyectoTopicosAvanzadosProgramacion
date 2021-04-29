@@ -13,11 +13,12 @@ namespace ProyectTopicosAvanzados.Views
 {
     public partial class EditTreatment : Form
     {
+    //Conexion a la DB
         SqlConnection conection = new SqlConnection(@"Data Source=DESKTOP-VKEH4OM;Initial Catalog = Clinica; integrated security=true");
         EditTreatmentDetails editTreatmentDetails = new EditTreatmentDetails();
         EditDoctor editDoctor = new EditDoctor();
         EditConsult editConsult = new EditConsult();
-
+        //Tratamiento actual
         int actualTreatment;
         public EditTreatment()
         {
@@ -28,6 +29,7 @@ namespace ProyectTopicosAvanzados.Views
             buttonDeleteTreatment.Enabled = false;
             buttonUpdateTreatment.Enabled = false;
         }
+        //Seleccion de todos los tratamientos
         private void SelectAllTreatments()
         {
             try
@@ -58,6 +60,7 @@ namespace ProyectTopicosAvanzados.Views
                 MessageBox.Show(err.Message);
             }
         }
+        //Busqueda de tratamiento
         private void buttonSearchTreatment_Click(object sender, EventArgs e)
         {
             try
@@ -104,7 +107,7 @@ namespace ProyectTopicosAvanzados.Views
                 MessageBox.Show(err.Message);
             }
         }
-
+        //Eliminacion de tratamiento
         private void buttonDeleteTreatment_Click(object sender, EventArgs e)
         {
             try
@@ -130,7 +133,7 @@ namespace ProyectTopicosAvanzados.Views
                 MessageBox.Show(err.Message);
             }
         }
-
+        //Modificacion de tratamiento
         private void buttonUpdateTreatment_Click(object sender, EventArgs e)
         {
             try
@@ -158,6 +161,7 @@ namespace ProyectTopicosAvanzados.Views
             }
         }
     }
+    //Clase para los detalles de tratamiento
     public class EditTreatmentDetails
     {
         public int doctor;
