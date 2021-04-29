@@ -13,11 +13,12 @@ namespace ProyectTopicosAvanzados.Views
 {
     public partial class EditPatient : Form
     {
+        //Conexion a la DB
         SqlConnection conection = new SqlConnection(@"Data Source=DESKTOP-VKEH4OM;Initial Catalog = Clinica; integrated security=true");
         EditPatientDetails patient = new EditPatientDetails();
         EditUnity editUnity = new EditUnity();
         DataTable dataTable = new DataTable();
-
+        //Paciente actual
         int actualPatient;
         public EditPatient()
         {
@@ -28,6 +29,7 @@ namespace ProyectTopicosAvanzados.Views
             buttonDelete.Enabled = false;
             buttonRegisterConsult.Enabled = false;
         }
+        //Seleccion de todos los pacientes
         private void SelectAllPatients()
         {
             try
@@ -47,7 +49,7 @@ namespace ProyectTopicosAvanzados.Views
             {
                 MessageBox.Show(err.Message);
             }
-        }
+        }//Agregamos los pacientes al combobox
         public void SelectAllPatients(ComboBox textBox)
         {
             try
@@ -78,7 +80,7 @@ namespace ProyectTopicosAvanzados.Views
                 MessageBox.Show(err.Message);
             }
 
-        }
+        }//Busqueda de paciente
         private void searchPatientButton_Click(object sender, EventArgs e)
         {
             try
@@ -119,7 +121,7 @@ namespace ProyectTopicosAvanzados.Views
                 MessageBox.Show(err.Message);
             }
         }
-
+        //Registro de paciente
         private void buttonRegisterConsult_Click(object sender, EventArgs e)
         {
             try
@@ -148,7 +150,7 @@ namespace ProyectTopicosAvanzados.Views
                 MessageBox.Show(err.Message);
             }
         }
-
+        //Eliminacion de paciente
         private void buttonDelete_Click(object sender, EventArgs e)
         {
             try
@@ -169,6 +171,7 @@ namespace ProyectTopicosAvanzados.Views
             }
         }
     }
+    //Clase para los detalles del paciente
     public class EditPatientDetails
     {
         public DateTime date = new DateTime();
