@@ -13,10 +13,11 @@ namespace ProyectTopicosAvanzados.Views
 {
     public partial class EditConsult : Form
     {
+        //Conection to the DB
         SqlConnection cnt = new SqlConnection(@"Data Source=DESKTOP-VKEH4OM;Initial Catalog = Clinica; integrated security=true");
         ConsultDetail consult = new ConsultDetail();
         EditPatient editPatient = new EditPatient();
-
+        //Var that store actual client
         public int consultActual;
         public EditConsult()
         {
@@ -27,17 +28,19 @@ namespace ProyectTopicosAvanzados.Views
             buttonUpdateConsult.Enabled = false;
             buttonDeleteConsult.Enabled = false;
         }
+        //Our datagrid table
         DataTable dataTable = new DataTable();
         private void SelectAllConsults()
         {
             try
             {
                 cnt.Open();
+                //Seleccionamos todas las consultas
                 String query = "SELECT register_date AS Fecha_Registro, sympton AS Sintomas, SS_number AS Numero_SS, register_id AS IDRegistro FROM Register";
                 SqlCommand command = new SqlCommand(query, cnt);
                 SqlDataAdapter adapter = new SqlDataAdapter(command);
                 adapter.Fill(dataTable);
-
+                //Rellenamos los datos en la tabla
                 dataGridView1.DataSource = dataTable;
 
                 cnt.Close();
@@ -47,6 +50,7 @@ namespace ProyectTopicosAvanzados.Views
                 MessageBox.Show(err.Message);
             }
         }
+        //Seleccionamos todas las consultas para el combobox
         public void SelectAllConsults(ComboBox textBox)
         {
             try
@@ -77,6 +81,7 @@ namespace ProyectTopicosAvanzados.Views
                 MessageBox.Show(err.Message);
             }
         }
+        //Actualizacion de consulta
         private void buttonUpdateConsult_Click(object sender, EventArgs e)
         {
             try
@@ -102,7 +107,7 @@ namespace ProyectTopicosAvanzados.Views
                 MessageBox.Show(en.Message);
             }
        }
-
+        //Eliminación de consulta
         private void buttonDeleteConsult_Click(object sender, EventArgs e)
         {
             try
@@ -125,7 +130,7 @@ namespace ProyectTopicosAvanzados.Views
             }
 
         }
-
+        //Busqueda de consulta
         private void buttonSearchConsult_Click(object sender, EventArgs e)
         {
             try
@@ -174,7 +179,7 @@ namespace ProyectTopicosAvanzados.Views
             }
         }
     }
-
+    //Class que guarda los detalles de la consutla
     public class ConsultDetail
     {
         public DateTime registerDate = new DateTime();
