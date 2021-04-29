@@ -21,6 +21,7 @@ namespace ProyectTopicosAvanzados.Views
         {
             InitializeComponent();
             SelectAllDoctors(textBoxDoctor);
+            SelectAllDoctors();
             buttonDeleteDoctor.Enabled = false;
             buttonUpdateDoctor.Enabled = false;
         }
@@ -116,7 +117,27 @@ namespace ProyectTopicosAvanzados.Views
                 MessageBox.Show(err.Message);
             }
         }
+        DataTable dataTable = new DataTable();
 
+        private void SelectAllDoctors()
+        {
+            try
+            {
+                cnt.Open();
+                String query = "SELECT doctor_id AS ID, doctor_speciality AS Especialidad, doctor_name AS Nombre FROM Doctor";
+                SqlCommand command = new SqlCommand(query, cnt);
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                adapter.Fill(dataTable);
+
+                dataGridView1.DataSource = dataTable;
+
+                cnt.Close();
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
+            }
+        }
         private void buttonDeleteDoctor_Click(object sender, EventArgs e)
         {
             try

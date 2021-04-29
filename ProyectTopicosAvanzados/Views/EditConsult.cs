@@ -23,8 +23,29 @@ namespace ProyectTopicosAvanzados.Views
             InitializeComponent();
             editPatient.SelectAllPatients(textBoxPatient);
             SelectAllConsults(textBoxID);
+            SelectAllConsults();
             buttonUpdateConsult.Enabled = false;
             buttonDeleteConsult.Enabled = false;
+        }
+        DataTable dataTable = new DataTable();
+        private void SelectAllConsults()
+        {
+            try
+            {
+                cnt.Open();
+                String query = "SELECT register_date AS Fecha_Registro, sympton AS Sintomas, SS_number AS Numero_SS, register_id AS IDRegistro FROM Register";
+                SqlCommand command = new SqlCommand(query, cnt);
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                adapter.Fill(dataTable);
+
+                dataGridView1.DataSource = dataTable;
+
+                cnt.Close();
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
+            }
         }
         public void SelectAllConsults(ComboBox textBox)
         {

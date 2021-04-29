@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.textBoxDoctorId = new System.Windows.Forms.ComboBox();
             this.buttonDeleteUnity = new FontAwesome.Sharp.IconButton();
             this.label4 = new System.Windows.Forms.Label();
             this.buttonUpdateUnit = new FontAwesome.Sharp.IconButton();
@@ -41,13 +42,15 @@
             this.buttonSearchUnity = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBoxDoctorId = new System.Windows.Forms.ComboBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Controls.Add(this.textBoxDoctorId);
             this.panel1.Controls.Add(this.buttonDeleteUnity);
             this.panel1.Controls.Add(this.label4);
@@ -61,6 +64,14 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 301);
             this.panel1.TabIndex = 34;
+            // 
+            // textBoxDoctorId
+            // 
+            this.textBoxDoctorId.FormattingEnabled = true;
+            this.textBoxDoctorId.Location = new System.Drawing.Point(12, 168);
+            this.textBoxDoctorId.Name = "textBoxDoctorId";
+            this.textBoxDoctorId.Size = new System.Drawing.Size(121, 21);
+            this.textBoxDoctorId.TabIndex = 48;
             // 
             // buttonDeleteUnity
             // 
@@ -203,13 +214,14 @@
             this.label5.TabIndex = 47;
             this.label5.Text = "Buscar unidad";
             // 
-            // textBoxDoctorId
+            // dataGridView1
             // 
-            this.textBoxDoctorId.FormattingEnabled = true;
-            this.textBoxDoctorId.Location = new System.Drawing.Point(12, 168);
-            this.textBoxDoctorId.Name = "textBoxDoctorId";
-            this.textBoxDoctorId.Size = new System.Drawing.Size(121, 21);
-            this.textBoxDoctorId.TabIndex = 48;
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(259, 13);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(485, 272);
+            this.dataGridView1.TabIndex = 37;
             // 
             // EditUnity
             // 
@@ -224,6 +236,7 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -244,5 +257,6 @@
         private FontAwesome.Sharp.IconButton buttonDeleteUnity;
         private System.Windows.Forms.ComboBox textBoxUnity;
         private System.Windows.Forms.ComboBox textBoxDoctorId;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

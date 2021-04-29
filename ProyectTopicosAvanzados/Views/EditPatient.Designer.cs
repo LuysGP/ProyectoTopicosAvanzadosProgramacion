@@ -35,6 +35,7 @@ namespace ProyectTopicosAvanzados.Views
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.textBoxUnity = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.buttonDelete = new FontAwesome.Sharp.IconButton();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -44,9 +45,10 @@ namespace ProyectTopicosAvanzados.Views
             this.label3 = new System.Windows.Forms.Label();
             this.textBoxName = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBoxUnity = new System.Windows.Forms.ComboBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -110,6 +112,7 @@ namespace ProyectTopicosAvanzados.Views
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Controls.Add(this.textBoxUnity);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.buttonDelete);
@@ -125,6 +128,14 @@ namespace ProyectTopicosAvanzados.Views
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 294);
             this.panel1.TabIndex = 16;
+            // 
+            // textBoxUnity
+            // 
+            this.textBoxUnity.FormattingEnabled = true;
+            this.textBoxUnity.Location = new System.Drawing.Point(256, 37);
+            this.textBoxUnity.Name = "textBoxUnity";
+            this.textBoxUnity.Size = new System.Drawing.Size(121, 21);
+            this.textBoxUnity.TabIndex = 52;
             // 
             // label6
             // 
@@ -228,13 +239,14 @@ namespace ProyectTopicosAvanzados.Views
             this.label5.TabIndex = 40;
             this.label5.Text = "Nombre";
             // 
-            // textBoxUnity
+            // dataGridView1
             // 
-            this.textBoxUnity.FormattingEnabled = true;
-            this.textBoxUnity.Location = new System.Drawing.Point(256, 37);
-            this.textBoxUnity.Name = "textBoxUnity";
-            this.textBoxUnity.Size = new System.Drawing.Size(121, 21);
-            this.textBoxUnity.TabIndex = 52;
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(256, 76);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(485, 208);
+            this.dataGridView1.TabIndex = 37;
             // 
             // EditPatient
             // 
@@ -249,6 +261,7 @@ namespace ProyectTopicosAvanzados.Views
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -271,5 +284,6 @@ namespace ProyectTopicosAvanzados.Views
         private System.Windows.Forms.ComboBox textBoxSS;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox textBoxUnity;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

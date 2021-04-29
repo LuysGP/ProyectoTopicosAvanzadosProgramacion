@@ -30,6 +30,7 @@ namespace ProyectTopicosAvanzados.Views
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
+            this.textBoxDoctor = new System.Windows.Forms.ComboBox();
             this.buttonSearchDoctor = new FontAwesome.Sharp.IconButton();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -40,9 +41,10 @@ namespace ProyectTopicosAvanzados.Views
             this.label3 = new System.Windows.Forms.Label();
             this.textBoxName = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBoxDoctor = new System.Windows.Forms.ComboBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -56,6 +58,14 @@ namespace ProyectTopicosAvanzados.Views
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(800, 157);
             this.panel2.TabIndex = 17;
+            // 
+            // textBoxDoctor
+            // 
+            this.textBoxDoctor.FormattingEnabled = true;
+            this.textBoxDoctor.Location = new System.Drawing.Point(13, 68);
+            this.textBoxDoctor.Name = "textBoxDoctor";
+            this.textBoxDoctor.Size = new System.Drawing.Size(121, 21);
+            this.textBoxDoctor.TabIndex = 17;
             // 
             // buttonSearchDoctor
             // 
@@ -98,6 +108,7 @@ namespace ProyectTopicosAvanzados.Views
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Controls.Add(this.buttonDeleteDoctor);
             this.panel1.Controls.Add(this.buttonUpdateDoctor);
             this.panel1.Controls.Add(this.textBoxEspeciality);
@@ -182,13 +193,14 @@ namespace ProyectTopicosAvanzados.Views
             this.label4.TabIndex = 40;
             this.label4.Text = "Nombre";
             // 
-            // textBoxDoctor
+            // dataGridView1
             // 
-            this.textBoxDoctor.FormattingEnabled = true;
-            this.textBoxDoctor.Location = new System.Drawing.Point(13, 68);
-            this.textBoxDoctor.Name = "textBoxDoctor";
-            this.textBoxDoctor.Size = new System.Drawing.Size(121, 21);
-            this.textBoxDoctor.TabIndex = 17;
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(262, 13);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(485, 272);
+            this.dataGridView1.TabIndex = 37;
             // 
             // EditDoctor
             // 
@@ -203,6 +215,7 @@ namespace ProyectTopicosAvanzados.Views
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -221,5 +234,6 @@ namespace ProyectTopicosAvanzados.Views
         private System.Windows.Forms.Label label4;
         private FontAwesome.Sharp.IconButton buttonDeleteDoctor;
         private System.Windows.Forms.ComboBox textBoxDoctor;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

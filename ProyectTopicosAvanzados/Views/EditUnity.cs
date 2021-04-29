@@ -16,16 +16,37 @@ namespace ProyectTopicosAvanzados.Views
         EditUnityDetails EditUnityDetails = new EditUnityDetails();
         EditDoctor editDoctor = new EditDoctor();
         int actualUnity;
+        DataTable dataTable = new DataTable();
 
         public EditUnity()
         {
             InitializeComponent();
             editDoctor.SelectAllDoctors(textBoxDoctorId);
             SelectAllUnits(textBoxUnity);
+            SelectAllUnits();
             buttonUpdateUnit.Enabled = false;
             buttonDeleteUnity.Enabled = false;
         }
+        private void SelectAllUnits()
+        {
+            try
+            {
+                conection.Open();
 
+                String query = "SELECT unity_id AS ID, unity_name AS Nombre, unity_plant AS Planta#, doctor_id AS IDDoctor FROM Unity";
+                SqlCommand command = new SqlCommand(query, conection);
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                adapter.Fill(dataTable);
+
+                dataGridView1.DataSource = dataTable;
+
+                conection.Close();
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
+            }
+        }
         public void SelectAllUnits(ComboBox textBox)
         {
             try

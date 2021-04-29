@@ -58,9 +58,9 @@ namespace ProyectTopicosAvanzados
             this.panelChildForm = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.editTreatment = new FontAwesome.Sharp.IconButton();
             this.buttonHistory = new FontAwesome.Sharp.IconButton();
             this.registerTreatment = new FontAwesome.Sharp.IconButton();
-            this.editTreatment = new FontAwesome.Sharp.IconButton();
             this.mainPanel.SuspendLayout();
             this.panelUnity.SuspendLayout();
             this.panelDoctors.SuspendLayout();
@@ -475,7 +475,7 @@ namespace ProyectTopicosAvanzados
             this.panelHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelHeader.Location = new System.Drawing.Point(215, 0);
             this.panelHeader.Name = "panelHeader";
-            this.panelHeader.Size = new System.Drawing.Size(669, 59);
+            this.panelHeader.Size = new System.Drawing.Size(769, 59);
             this.panelHeader.TabIndex = 1;
             this.panelHeader.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelHeader_MouseDown);
             // 
@@ -499,7 +499,7 @@ namespace ProyectTopicosAvanzados
             this.buttonClose.IconColor = System.Drawing.Color.White;
             this.buttonClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.buttonClose.IconSize = 35;
-            this.buttonClose.Location = new System.Drawing.Point(633, 0);
+            this.buttonClose.Location = new System.Drawing.Point(733, 0);
             this.buttonClose.Name = "buttonClose";
             this.buttonClose.Size = new System.Drawing.Size(36, 59);
             this.buttonClose.TabIndex = 0;
@@ -514,7 +514,7 @@ namespace ProyectTopicosAvanzados
             this.panelChildForm.Location = new System.Drawing.Point(215, 59);
             this.panelChildForm.Margin = new System.Windows.Forms.Padding(3, 3, 15, 3);
             this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.Size = new System.Drawing.Size(669, 562);
+            this.panelChildForm.Size = new System.Drawing.Size(769, 562);
             this.panelChildForm.TabIndex = 2;
             // 
             // pictureBox2
@@ -523,7 +523,7 @@ namespace ProyectTopicosAvanzados
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(669, 562);
+            this.pictureBox2.Size = new System.Drawing.Size(769, 562);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox2.TabIndex = 3;
             this.pictureBox2.TabStop = false;
@@ -537,8 +537,27 @@ namespace ProyectTopicosAvanzados
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(215, 552);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(669, 69);
+            this.panel1.Size = new System.Drawing.Size(769, 69);
             this.panel1.TabIndex = 3;
+            // 
+            // editTreatment
+            // 
+            this.editTreatment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(86)))), ((int)(((byte)(163)))));
+            this.editTreatment.FlatAppearance.BorderSize = 0;
+            this.editTreatment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.editTreatment.ForeColor = System.Drawing.Color.White;
+            this.editTreatment.IconChar = FontAwesome.Sharp.IconChar.History;
+            this.editTreatment.IconColor = System.Drawing.Color.White;
+            this.editTreatment.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.editTreatment.IconSize = 15;
+            this.editTreatment.Location = new System.Drawing.Point(367, 17);
+            this.editTreatment.Name = "editTreatment";
+            this.editTreatment.Size = new System.Drawing.Size(159, 40);
+            this.editTreatment.TabIndex = 40;
+            this.editTreatment.Text = "Editar tratamiento";
+            this.editTreatment.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.editTreatment.UseVisualStyleBackColor = false;
+            this.editTreatment.Click += new System.EventHandler(this.editTreatment_Click);
             // 
             // buttonHistory
             // 
@@ -578,31 +597,12 @@ namespace ProyectTopicosAvanzados
             this.registerTreatment.UseVisualStyleBackColor = false;
             this.registerTreatment.Click += new System.EventHandler(this.registerTreatment_Click);
             // 
-            // editTreatment
-            // 
-            this.editTreatment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(86)))), ((int)(((byte)(163)))));
-            this.editTreatment.FlatAppearance.BorderSize = 0;
-            this.editTreatment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.editTreatment.ForeColor = System.Drawing.Color.White;
-            this.editTreatment.IconChar = FontAwesome.Sharp.IconChar.History;
-            this.editTreatment.IconColor = System.Drawing.Color.White;
-            this.editTreatment.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.editTreatment.IconSize = 15;
-            this.editTreatment.Location = new System.Drawing.Point(367, 17);
-            this.editTreatment.Name = "editTreatment";
-            this.editTreatment.Size = new System.Drawing.Size(159, 40);
-            this.editTreatment.TabIndex = 40;
-            this.editTreatment.Text = "Editar tratamiento";
-            this.editTreatment.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.editTreatment.UseVisualStyleBackColor = false;
-            this.editTreatment.Click += new System.EventHandler(this.editTreatment_Click);
-            // 
             // Layout
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(248)))), ((int)(((byte)(251)))));
-            this.ClientSize = new System.Drawing.Size(884, 621);
+            this.ClientSize = new System.Drawing.Size(984, 621);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelChildForm);
             this.Controls.Add(this.panelHeader);

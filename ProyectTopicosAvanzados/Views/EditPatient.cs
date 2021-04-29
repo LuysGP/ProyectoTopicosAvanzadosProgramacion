@@ -16,14 +16,37 @@ namespace ProyectTopicosAvanzados.Views
         SqlConnection conection = new SqlConnection(@"Data Source=DESKTOP-VKEH4OM;Initial Catalog = Clinica; integrated security=true");
         EditPatientDetails patient = new EditPatientDetails();
         EditUnity editUnity = new EditUnity();
+        DataTable dataTable = new DataTable();
+
         int actualPatient;
         public EditPatient()
         {
             InitializeComponent();
             SelectAllPatients(textBoxSS);
             editUnity.SelectAllUnits(textBoxUnity);
+            SelectAllPatients();
             buttonDelete.Enabled = false;
             buttonRegisterConsult.Enabled = false;
+        }
+        private void SelectAllPatients()
+        {
+            try
+            {
+                conection.Open();
+
+                String query = "SELECT * FROM Patient";
+                SqlCommand command = new SqlCommand(query, conection);
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                adapter.Fill(dataTable);
+
+                dataGridView1.DataSource = dataTable;
+
+                conection.Close();
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
+            }
         }
         public void SelectAllPatients(ComboBox textBox)
         {
