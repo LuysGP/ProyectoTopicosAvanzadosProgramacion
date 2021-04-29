@@ -13,6 +13,7 @@ namespace ProyectTopicosAvanzados.Views
 {
     public partial class Consults : Form
     {
+        //Conexion a la base de datos
         SqlConnection conection = new SqlConnection(@"Data Source=DESKTOP-VKEH4OM;Initial Catalog = Clinica; integrated security=true");
         DataTable dataTable = new DataTable();
         public Consults()
@@ -20,7 +21,7 @@ namespace ProyectTopicosAvanzados.Views
             InitializeComponent();
             SelectAllConsults();
         }
-
+        //Seleccion de todas las consultas para llenar en la tabla
         private void SelectAllConsults()
         {
             try
