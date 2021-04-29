@@ -13,6 +13,7 @@ namespace ProyectTopicosAvanzados.Views
 {
     public partial class EditDoctor : Form
     {
+        //Conexion a la DB y doctor actual
         SqlConnection cnt = new SqlConnection(@"Data Source=DESKTOP-VKEH4OM;Initial Catalog = Clinica; integrated security=true");
         DoctorDetail doctor = new DoctorDetail();
         public int doctorActual;
@@ -25,6 +26,7 @@ namespace ProyectTopicosAvanzados.Views
             buttonDeleteDoctor.Enabled = false;
             buttonUpdateDoctor.Enabled = false;
         }
+        //Seleccion de todos los doctores
         public void SelectAllDoctors(ComboBox textBox)
         {
             try
@@ -54,6 +56,7 @@ namespace ProyectTopicosAvanzados.Views
                 MessageBox.Show(err.Message);
             }
         }
+        //Consulta a solo un doctor
         private void buttonSearchDoctor_Click(object sender, EventArgs e)
         {
             try
@@ -81,7 +84,8 @@ namespace ProyectTopicosAvanzados.Views
                     textBoxName.Text = doctor.nombre;
 
                     buttonUpdateDoctor.Enabled = true;
-                    buttonDeleteDoctor.Enabled = true;                    doctorActual = int.Parse(textBoxDoctor.Text);
+                    buttonDeleteDoctor.Enabled = true;                    
+                    doctorActual = int.Parse(textBoxDoctor.Text);
                 }
                 cnt.Close();
             }
@@ -90,7 +94,8 @@ namespace ProyectTopicosAvanzados.Views
                 MessageBox.Show(err.Message);
             }
         }
-
+    
+        //Modificacion del doctor
         private void buttonUpdateDoctor_Click(object sender, EventArgs e)
         {
             try
@@ -118,7 +123,7 @@ namespace ProyectTopicosAvanzados.Views
             }
         }
         DataTable dataTable = new DataTable();
-
+        //Seleccion de todos los doctores
         private void SelectAllDoctors()
         {
             try
@@ -138,6 +143,7 @@ namespace ProyectTopicosAvanzados.Views
                 MessageBox.Show(err.Message);
             }
         }
+        //Eliminacion del doctor
         private void buttonDeleteDoctor_Click(object sender, EventArgs e)
         {
             try
@@ -161,7 +167,7 @@ namespace ProyectTopicosAvanzados.Views
             }
         }
     }
-
+    //Clase para los detalles del doctor
     public class DoctorDetail
     {
         public string speciality;
