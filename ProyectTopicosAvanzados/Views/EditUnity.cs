@@ -12,9 +12,11 @@ namespace ProyectTopicosAvanzados.Views
 {
     public partial class EditUnity : Form
     {
+    //Conexion a la db
         SqlConnection conection = new SqlConnection(@"Data Source=DESKTOP-VKEH4OM;Initial Catalog = Clinica; integrated security=true");
         EditUnityDetails EditUnityDetails = new EditUnityDetails();
         EditDoctor editDoctor = new EditDoctor();
+        //Unidad actual
         int actualUnity;
         DataTable dataTable = new DataTable();
 
@@ -27,6 +29,7 @@ namespace ProyectTopicosAvanzados.Views
             buttonUpdateUnit.Enabled = false;
             buttonDeleteUnity.Enabled = false;
         }
+        //Seleccion de todas las unidades
         private void SelectAllUnits()
         {
             try
@@ -47,6 +50,7 @@ namespace ProyectTopicosAvanzados.Views
                 MessageBox.Show(err.Message);
             }
         }
+        //Rellenado de combobox para las unidades
         public void SelectAllUnits(ComboBox textBox)
         {
             try
@@ -78,7 +82,8 @@ namespace ProyectTopicosAvanzados.Views
             }
 
         }
-
+        
+        //Modificacion de unidad
         private void buttonUpdateUnit_Click(object sender, EventArgs e)
         {
             try
@@ -103,7 +108,7 @@ namespace ProyectTopicosAvanzados.Views
                 MessageBox.Show(err.Message);
             }
         }
-
+        //Eliminacion de unidad
         private void buttonDeleteUnity_Click(object sender, EventArgs e)
         {
             try
@@ -124,7 +129,7 @@ namespace ProyectTopicosAvanzados.Views
                 MessageBox.Show(err.Message);
             }
         }
-
+        //Busqueda de unidad
         private void buttonSearchUnity_Click(object sender, EventArgs e)
         {
             try
@@ -171,6 +176,7 @@ namespace ProyectTopicosAvanzados.Views
             }
         }
     }
+    //Clase para los detalles de unidad
     public class EditUnityDetails
     {
         public string name;
