@@ -50,7 +50,7 @@ namespace ProyectTopicosAvanzados.Views
                 MessageBox.Show(err.Message);
             }
         }
-        //Rellenado de combobox para las unidades
+        //Rellenado de combobox para las unidades.
         public void SelectAllUnits(ComboBox textBox)
         {
             try
