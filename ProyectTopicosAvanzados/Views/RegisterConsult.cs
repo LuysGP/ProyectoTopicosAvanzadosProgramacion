@@ -20,7 +20,7 @@ namespace ProyectTopicosAvanzados.Views
         {
 
             InitializeComponent();
-            editPatient.SelectAllPatients(textBoxPatient);
+            editPatient.SelectAllPatients(textBoxPatient);//Combobox para los pacientes
         }
 
         //Boton para registrar una Consulta instanciando a un objeto
