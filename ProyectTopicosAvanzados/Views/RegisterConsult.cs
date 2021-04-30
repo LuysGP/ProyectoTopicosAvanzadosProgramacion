@@ -22,7 +22,8 @@ namespace ProyectTopicosAvanzados.Views
             InitializeComponent();
             editPatient.SelectAllPatients(textBoxPatient);
         }
-
+        
+        //Boton para registrar las consultas (altas)
         private void buttonRegisterConsult_Click(object sender, EventArgs e)
         {
             try
@@ -40,18 +41,23 @@ namespace ProyectTopicosAvanzados.Views
         }
     }
 
+    //Clase creada para almacenar los datos ingresados y mandarlos a la base datos 
     public class ConsultDetails
     {
         int patient;
         string symptom;
         SqlConnection conection = new SqlConnection(@"Data Source=DESKTOP-VKEH4OM;Initial Catalog = Clinica; integrated security=true");
         DateTime date = new DateTime();
+        
+        //En este constructor guardamos los paramatros enviados desde el objeto creado
         public ConsultDetails(int patient, string symptom)
         {
             this.patient = patient;
             this.symptom = symptom;
             this.date = DateTime.Now;
         }
+        
+        //Metodo para enviar todas las consultas registradas
         public void Register()
         {
             conection.Open();
