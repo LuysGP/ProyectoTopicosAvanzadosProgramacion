@@ -17,9 +17,10 @@ namespace ProyectTopicosAvanzados.Views
         public RegisterUnity()
         {
             InitializeComponent();
-            editConsult.SelectAllDoctors(textBoxDoctorId);
+            editConsult.SelectAllDoctors(textBoxDoctorId);//Combobox de los doctores
         }
-
+        
+        //Enviamos los datos ingresados en cada uno de los textbox de la forma como parametros en el objeto
         private void buttonRegisterConsult_Click(object sender, EventArgs e)
         {
             try
@@ -35,20 +36,26 @@ namespace ProyectTopicosAvanzados.Views
             }
         }
     }
+    
+    //Clase usada para almacenar y enviar los datos a la base de datos por medio de un metodo 
     public class UnityDetails
     {
         int plant;
         string name;
         int doctor_id;
 
+        //Conexion de la base de datos con el programa
         SqlConnection conection = new SqlConnection(@"Data Source=DESKTOP-VKEH4OM;Initial Catalog = Clinica; integrated security=true");
+        
+        //Constructor que almacena los datos enviados por el objeto dentro de los campos de la clase
         public UnityDetails(int plant, string name, int doctor_id)
         {
             this.doctor_id = doctor_id;
             this.name = name;
             this.plant = plant;
         }
-
+        
+        //Metodo que envia los datos capturados por el programa hacia la base de datos
         public void Register()
         {
             conection.Open();
