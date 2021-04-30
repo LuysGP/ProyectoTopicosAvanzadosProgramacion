@@ -155,15 +155,15 @@ namespace ProyectTopicosAvanzados.Views
         {
             try
             {
-                conection.Open();
-                String query = "DELETE FROM Patient WHERE SS_number=@patientId";
+                conection.Open();//Abrimos la conexion para poder eliminar los datos de la base de datos
+                String query = "DELETE FROM Patient WHERE SS_number=@patientId";//codigo para poder eliminar los datos
 
-                SqlCommand command = new SqlCommand(query, conection);
-                command.Parameters.AddWithValue("patientId", actualPatient);
+                SqlCommand command = new SqlCommand(query, conection);//establecemos una instancia del tipo SqlCommand para poder ejecutar la accion
+                command.Parameters.AddWithValue("patientId", actualPatient);//Con este codigo accedemos a la tabla que queremos elimnar los datos
                 command.ExecuteNonQuery();
                 MessageBox.Show("Paciente eliminado correctamente");
 
-                conection.Close();
+                conection.Close();//Se cierra la base de datos
             }
             catch (Exception err)
             {
