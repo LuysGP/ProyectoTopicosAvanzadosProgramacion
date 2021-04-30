@@ -112,15 +112,15 @@ namespace ProyectTopicosAvanzados.Views
         {
             try
             {
-                cnt.Open();
-                String query = "DELETE FROM register WHERE register_id=@registerId";
+                cnt.Open();//Abrimos la conexion para poder eliminar los datos de la base de datos
+                String query = "DELETE FROM register WHERE register_id=@registerId";//codigo para poder eliminar los datos
 
-                SqlCommand command = new SqlCommand(query, cnt);
-                command.Parameters.AddWithValue("registerId", consultActual);
+                SqlCommand command = new SqlCommand(query, cnt);//establecemos una instancia del tipo SqlCommand para poder ejecutar la accion
+                command.Parameters.AddWithValue("registerId", consultActual);//Con este codigo accedemos a la tabla que queremos elimnar los datos
                 command.ExecuteNonQuery();
                 MessageBox.Show("Consulta eliminada correctamente");
 
-                cnt.Close();
+                cnt.Close();//Se cierra la base de datos
 
                 textBoxSymptom.Clear();                
             }
@@ -130,7 +130,7 @@ namespace ProyectTopicosAvanzados.Views
             }
 
         }
-        //Busqueda de consulta
+        //Busqueda de consulta.
         private void buttonSearchConsult_Click(object sender, EventArgs e)
         {
             try
