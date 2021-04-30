@@ -18,9 +18,9 @@ namespace ProyectTopicosAvanzados.Views
         public RegisterPatient()
         {
             InitializeComponent();
-            editUnity.SelectAllUnits(textBoxUnity);
+            editUnity.SelectAllUnits(textBoxUnity);//Combobox de la unidad
         }
-
+        //Enviamos los datos ingresados en cada uno de los textbox de la forma como parametros en el objeto
         private void buttonRegisterConsult_Click(object sender, EventArgs e)
         {
             try
@@ -35,6 +35,8 @@ namespace ProyectTopicosAvanzados.Views
             }
         }
     }
+    
+    //Clase usada para almacenar y enviar los datos a la base de datos por medio de un metodo 
     public class PatientDetails
     {
         public string name;
@@ -43,8 +45,10 @@ namespace ProyectTopicosAvanzados.Views
         public DateTime date = new DateTime();
         public int unity_id;
 
-
+    //Conexion de la base de datos con el programa
         SqlConnection conection = new SqlConnection(@"Data Source=DESKTOP-VKEH4OM;Initial Catalog = Clinica; integrated security=true");
+        
+        //Constructor que almacena los datos enviados por el objeto dentro de los campos de la clase
         public PatientDetails(int ss, int age, string name, int unity_id)
         {
             this.ss = ss;
@@ -53,6 +57,8 @@ namespace ProyectTopicosAvanzados.Views
             this.date = DateTime.Now;
             this.unity_id = unity_id;
         }
+        
+        //Metodo que envia los datos capturados por el programa hacia la base de datos
         public void Register()
         {
             conection.Open();
