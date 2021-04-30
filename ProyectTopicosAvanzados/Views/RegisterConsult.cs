@@ -23,6 +23,7 @@ namespace ProyectTopicosAvanzados.Views
             editPatient.SelectAllPatients(textBoxPatient);
         }
 
+        //Boton para registrar una Consulta instanciando a un objeto
         private void buttonRegisterConsult_Click(object sender, EventArgs e)
         {
             try
@@ -40,18 +41,23 @@ namespace ProyectTopicosAvanzados.Views
         }
     }
 
+    //Clase para agregar todos los datos hacia la base de datos
     public class ConsultDetails
     {
         int patient;
         string symptom;
         SqlConnection conection = new SqlConnection(@"Data Source=DESKTOP-VKEH4OM;Initial Catalog = Clinica; integrated security=true");
         DateTime date = new DateTime();
+        
+        //Constructor que almacena en campos los parametros enviados desde el objeto creado
         public ConsultDetails(int patient, string symptom)
         {
             this.patient = patient;
             this.symptom = symptom;
             this.date = DateTime.Now;
         }
+        
+        //Metodo para agregar los datos a la base de datos 
         public void Register()
         {
             conection.Open();
