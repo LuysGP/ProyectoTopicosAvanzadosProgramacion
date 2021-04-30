@@ -20,10 +20,11 @@ namespace ProyectTopicosAvanzados.Views
         public RegisterTreatment()
         {
             InitializeComponent();
-            editDoctor.SelectAllDoctors(textBoxDoctor);
-            editConsult.SelectAllConsults(textBoxConsult);
+            editDoctor.SelectAllDoctors(textBoxDoctor);//Combobox del Doctor
+            editConsult.SelectAllConsults(textBoxConsult);//Combobox de las Consultas
         }
-
+        
+        //Enviamos los datos ingresados en cada uno de los textbox de la forma como parametros en el objeto     
         private void buttonRegisterConsult_Click(object sender, EventArgs e)
         {
             try
@@ -42,7 +43,8 @@ namespace ProyectTopicosAvanzados.Views
         }
 
     }
-
+   
+    //Clase usada para almacenar y enviar los datos a la base de datos por medio de un metodo 
     public class TreatmentDetails
     {
         int doctor;
@@ -51,8 +53,11 @@ namespace ProyectTopicosAvanzados.Views
         String diary;
         int consult;
 
+        //Conexion de la base de datos con el programa
         SqlConnection conection = new SqlConnection(@"Data Source=DESKTOP-VKEH4OM;Initial Catalog = Clinica; integrated security=true");
 
+        
+        //Constructor que almacena los datos enviados por el objeto dentro de los campos de la clase
         public TreatmentDetails(int doctor, string nurse, String tracing, String diary, int consult)
         {
             this.consult = consult;
@@ -62,6 +67,8 @@ namespace ProyectTopicosAvanzados.Views
             this.diary = diary;
             this.doctor = doctor;
         }
+        
+        //Metodo que envia los datos capturados por el programa hacia la base de datos
         public void Register()
         {
             conection.Open();
