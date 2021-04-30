@@ -113,13 +113,13 @@ namespace ProyectTopicosAvanzados.Views
         {
             try
             {
-                conection.Open();
-                String query = "DELETE FROM Unity WHERE unity_id = @id";
-                SqlCommand command = new SqlCommand(query, conection);
+                conection.Open();//Abrimos la conexion para poder eliminar los datos de la base de datos
+                String query = "DELETE FROM Unity WHERE unity_id = @id";//codigo para poder eliminar los datos
+                SqlCommand command = new SqlCommand(query, conection);//establecemos una instancia del tipo SqlCommand para poder ejecutar la accion
 
-                command.Parameters.AddWithValue("id", actualUnity);
+                command.Parameters.AddWithValue("id", actualUnity);//Con este codigo accedemos a la tabla que queremos elimnar los datos
 
-                command.ExecuteNonQuery();
+                command.ExecuteNonQuery();//Se cierra la base de datos
 
                 MessageBox.Show("Unidad eliminada correctamente");
             }
